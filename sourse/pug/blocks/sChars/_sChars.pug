@@ -1,0 +1,100 @@
+mixin sChars(data)
+	// start sChars
+	+b.SECTION.sChars.section#sChars&attributes(attributes)
+		.container
+			+e.row.row
+				+sCharsItem({
+					imgNum: 1,
+					title: 'ТМО-80',
+					footTxt: 'В случае выхода из строя — бесплатная замена в течение 24 часов',
+				})
+					+sCharsChar({
+						title: 'Мощность',
+						val: '80 кВА',
+					})
+					+sCharsChar({
+						title: 'Напряжение',
+						val: '380 В',
+					})
+					+sCharsChar({
+						title: 'Вес',
+						val: '665 кг',
+					})
+				+sCharsItem({
+					imgNum: 2,
+					title: 'ТМО-50',
+					footTxt: 'Возможность работы от дизельного генератора',
+				})
+					+sCharsChar({
+						title: 'Мощность',
+						val: '50 кВА',
+					})
+					+sCharsChar({
+						title: 'Напряжение',
+						val: '380/95-42 В',
+					})
+					+sCharsChar({
+						title: 'Вес',
+						val: '365 кг',
+					})
+			+b.charSlider
+				+e.row.row.align-items-center
+					+e.col--left.col-lg-auto.align-self-lg-start
+						+e.title Аренда ТМО-80
+						+e.info Залог — 30 000 ₽
+							+b.hint
+								+e.ball ?
+								+e.content Обеспечительный залог за каждую единицу оборудования
+					+e.col--right.col-lg
+						+e.slider-wrap
+							.swiper.sChars-slider-js
+								.swiper-wrapper
+									+sCharsSlide({
+										plate: 'Базовая ставка',
+										price: 'от 900  ₽/сутки',
+										descr: 'Минимальный срок аренды — 10 дней',
+									})
+									+sCharsSlide({
+										plate: 'Ставка плюс',
+										price: 'от 700  ₽/сутки',
+										descr: 'При аренде от 20 дней',
+									})
+									+sCharsSlide({
+										plate: 'Ставка выгодно',
+										price: 'от 500  ₽/сутки',
+										descr: 'При аренде от 4 штук',
+									})
+									+sCharsSlide({
+										plate: 'Супер экономия',
+										price: 'от 400  ₽/сутки',
+										descr: 'При аренде от 10 дней и аренде опалубки!',
+									})
+	// end sChars
+mixin sCharsSlide(data)
+	.swiper-slide
+		+e.item
+			+e.plate=data.plate
+			+e.price=data.price
+			+e.descr=data.descr
+			+e.btn-cont
+				+e.btn.link-modal-js.btn-default-js(href="#") Оставить&#160;заявку
+
+mixin sCharsItem(data)
+	.col-lg-6
+		+e.sub-row.row.flex-sm-nowrap.gy-5
+			+e.sub-col--left.col-sm-6.col-xl-6
+				+pic(`sChars-img-${data.imgNum}.png`)(class="sChars__img")
+			+e.sub-col--right.col-sm-6.col-xl-6
+				+e.H2.title.text-center.text-sm-start=data.title
+				+e.chars
+					block
+				+e.foot-txt=data.footTxt
+
+mixin sCharsChar(data)
+	+e.char
+		+e.ch-row.row.align-items-center
+			+e.ch-col--ball.col-auto
+				+e.ch-ball
+			+e.ch-col--title.col-auto=data.title
+			+e.ch-col--dots.col.align-self-end
+			+e.ch-col--val.col-auto=data.val

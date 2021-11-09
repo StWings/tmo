@@ -1,0 +1,55 @@
+mixin sScheme(data)
+	// start sScheme
+	+b.SECTION.sScheme.section#sScheme&attributes(attributes)
+		.container
+			+pic('sScheme-bg.png')(class="sScheme__bg")
+			+b.section-title.text-center
+				h2 Схема подключения КТПТО (ТМО-80)
+			+pic('sScheme-img-big.png')(class="sScheme__img d-none d-xl-flex")
+			+pic('sScheme-img.png')(class="sScheme__img d-xl-none")
+			+e.row.row
+				.col-6.col-lg-3
+					+sSchemeItem('01. От источника тока к КТПТО-80')
+						li не более 70 метров
+						li 3 фазы и заземление
+					+sSchemeItem('До 30м')
+						li КГ 4*16 мм2
+						li КГ 3*16 мм2 + 1*10 мм2
+						li КГ 3*16 мм2  + 1*6 мм2
+					+sSchemeItem('От 30м до 70м')
+						li КГ 4*25 мм2
+						li КГ 3*25 мм2 + 1*16 мм2
+						li КГ 3*25 мм2 + 1*10 мм2
+				.col-6.col-lg-3
+					+sSchemeItem('02. Магистральный провод')
+						li не более 30 метров
+						li Арматура не менее D22
+						li АПКВ 1*35 мм2
+						li АВВГ 4*16 мм2
+						li АВВГ 4*25 мм2
+						li Сварной кабель КГ от 70 мм2
+						li (по Меди)
+						li до 90 мм2  (по Алюминию)
+				.col-6.col-lg-3
+					+sSchemeItem('03. Холодные концы')
+						li Не более 6 метров
+						li АПВ 1*4 мм2
+						li ПВ 1*1,5 мм2
+						li ПВ 1*2,5 мм2
+				.col-6.col-lg-3
+					+sSchemeItem('04. Греющий провод')
+						li ПНСВ 1*1,0 мм2
+						li ПНСВ 1*1,2 мм2
+						li ПНСВ 1*1,3 мм2
+						li ПНСВ 1*1,4 мм2
+						li ПТПЖ 2*1,2 мм2
+						li ПТПЖ 2*1,3 мм2
+						li ПТПЖ 2*1,4 мм2
+	// end sScheme
+
+mixin sSchemeItem(title)
+	+e.item
+		+e.title=title
+		+e.UL.txt-list
+			block
+

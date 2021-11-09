@@ -1,32 +1,78 @@
 mixin menu-toggle()
 	+b.toggle-menu-mobile--js
 		span
+
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js
+	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
+			+e.logo(href="/")
+				img(loading="lazy" src="img/@2x/logo.png" alt="")
 			+mnu()
+			+topNavIconedItem({
+				iconName: 'tell',
+				href: 'tel:+79852203638',
+				linkVal: '+7 (985) 220-36-38',
+				wa: true,
+			})
+			+topNavIconedItem({
+				iconName: 'mail',
+				href: 'mailto:tmo80@bk.ru',
+				linkVal: 'tmo80@bk.ru',
+				wa: false,
+			})
+			+e.btn.link-modal-js.btn-default.btn-default-js(href="#modal-call") Заказать&nbsp;звонок
+
 	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
+			+e.row.row.align-items-center
+				.col.col-xl-auto
+					+e.logo(href="/")
+						img(loading="lazy" src="img/@2x/logo.png" alt="")
+				.col.d-none.d-xl-block
+					+e.txt Оборудование для прогрева бетона
+				+topNavIconed({
+					addColClass: 'd-none d-md-block tel-col',
+					iconName: 'tell',
+					href: 'tel:+79852203638',
+					linkVal: '+7 (985) 220-36-38',
+					wa: true,
+				})
+				+topNavIconed({
+					addColClass: 'd-none d-lg-block',
+					iconName: 'mail',
+					href: 'mailto:tmo80@bk.ru',
+					linkVal: 'tmo80@bk.ru',
+					wa: false,
+				})
+				.col-auto.d-none.d-sm-block
+					+e.btn.link-modal-js.btn-default-js(href="#modal-call") Заказать&nbsp;звонок
 				.col-auto.d-lg-none
 					+menu-toggle()
-				.col
+				//-.col
 					.menu-mobile.menu-mobile--js
 						+menu-toggle()
 						+mnu()
-					
 	// end top-nav
+
+mixin topNavIconed(data)
+	+e.col.col-auto(class=`${data.addColClass || ''}`)
+		+topNavIconedItem(data)
+
+mixin topNavIconedItem(data)
+	+b.iconed-row.row.align-items-center
+		.col-auto
+			+e.icon.back(href=data.href)
+				.back-wrap
+					img.back-img(loading="lazy" src=`img/svg/${data.iconName}.svg` alt="")
+		.col-auto
+			+e.link(href=data.href)=data.linkVal
+		if data.wa
+			.col-auto
+				+e.wa(href="#")
+					img(loading="lazy" src="img/svg/whatsapp.svg" alt="")

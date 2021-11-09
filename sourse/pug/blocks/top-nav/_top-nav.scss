@@ -1,49 +1,93 @@
 .top-nav {
-	// background: svg-load('../svg/check.svg',  stroke=$primary); 
-	// 
-	@include media-breakpoint-up(xl) {
-		background-color: #000;
-		border: 1px solid #000;
+	background-color: $white;
+	padding: rem(20) 0;
+	box-shadow: var(--tn-box-shadow, none);
+
+	//-
+	&__row{
+		--bs-gutter-x: #{rem(20)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(38)};
+		}
 	}
+	&__logo{
+		display: block;
+		width: rem(213);
 
-	@include media-breakpoint-up(lg) {
-		background-color: red;
-
+		img{
+			width: 100%;
+		}
 	}
-	p{
-		@include ell();
+	&__txt{
+		//-
+		max-width: rem(180);
+		font-weight: 600;
+		line-height: calc(25/17);
 	}
+	&__col{
 
-	@include media-breakpoint-up(md) {}
-
-	@include media-breakpoint-up(sm) {}
-
-	@include media-breakpoint-up(xs) {}
-
-	// 
-	@include media-breakpoint-between(md, xl) {}
-
-	// 
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
-
-	// 
-	@include media-breakpoint-down(xl) {}
-
-	@include media-breakpoint-down(lg) {}
-
-	@include media-breakpoint-down(md) {}
-
-	@include media-breakpoint-down(sm) {}
-
-	@include media-breakpoint-down(xs) {}
+		&.tel-col{
+			@include media-breakpoint-up(xl){
+				position: relative;
+				left: 15px;
+			}
+		}
+	}
+	&__btn{
+		@extend .btn-default;
+		padding: rem(10) rem(18);
+	}
+	&__{}
+	&__{}
 }
 
+.iconed-row{
+	--bs-gutter-x: #{rem(15)};
+	&__icon{
+		width: rem(35);
+		height: rem(35);
+		border-radius: 35px;
+		padding: rem(8);
 
+		border: 1px solid $black;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		--backplate-col: transparent;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__link{
+		display: block;
+		color: $black;
+		&:hover{
+			color: $primary;
+		}
+
+		font-weight: 600;
+		line-height: calc(20/17);
+	}
+	&__wa{
+		@include media-breakpoint-up(xl){
+			position: relative;
+			left: -5px;
+		}
+
+		width: rem(20);
+		height: rem(20);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+		}
+	}
+}

@@ -1,10 +1,55 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
+		+e.container.container
+			+e.box
+				+e.main-row.row.gy-0.gx-0
+					+e.col--white.col-xl-auto.col-lg-3
+						h1 Самый новый арендный парк в&nbsp;Москве 2017-2021
+					+e.col--black.col-xl.col-lg-9
+						+e.sub-row.row.align-items-center
+							+headerBlockItem({
+								imgNum: 1,
+								txt: 'Продажа ТМО',
+							})
+							+headerBlockItem({
+								imgNum: 2,
+								txt: 'Выкуп ТМО',
+								hint: true,
+							})
+							+headerBlockItem({
+								imgNum: 3,
+								txt: 'Режим работы 24/7',
+							})
+							+headerBlockItem({
+								imgNum: 4,
+								txt: 'Срочная доставка в день обращения',
+							})
+							+headerBlockItem({
+								imgNum: 5,
+								txt: 'Отгрузка в выходной день',
+							})
+							.col-md-4.col-sm-4.d-none.d-sm-block
+								+e.logo
+									img(loading="lazy" src='img/svg/gray-logo-txt.svg' alt="")
+			+e.foot-txt.text-center
+				span В арендном парке только масляные ТМО 2015-2020г
 
-			.row
-						
 	// end headerBlock
+
+mixin headerBlockItem(data)
+	.col-sm-6.col-md-4
+		+e.item
+			+e.item-row.row.align-items-center.flex-nowrap
+				+e.col--ball.col-auto
+					//-+e.ball
+						img(loading="lazy" src=`img/svg/headerBlockItem-${data.imgNum}.svg` alt="")
+					+e.ball.back
+						.back-wrap
+							img.back-img(loading="lazy" src=`img/svg/headerBlockItem-${data.imgNum}.svg` alt="")
+				+e.col--hint.col
+					if data.hint
+						+b.hint
+							+e.ball ?
+							+e.content Гарантированный выкуп купленного у нас оборудования
+					+e.txt!=data.txt

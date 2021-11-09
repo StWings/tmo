@@ -3,30 +3,37 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sChars/_sChars.pug
+include ../blocks/sScheme/_sScheme.pug
+include ../blocks/sSlider/_sSlider.pug
+include ../blocks/sImportant/_sImportant.pug
+include ../blocks/sAction/_sAction.pug
+include ../blocks/sUsefull/_sUsefull.pug
+include ../blocks/sDelivery/_sDelivery.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= null
+	- let  bg='01.png'
 
 block title
 	- let  title= 'title'
 	title= title
 block pagecontent
-	//- +mob-mnu()
+	+mob-mnu()
 	+header()
-	+top-nav()
-	
+		+top-nav()
 	+topLine()
-	.container
-		.swiper-wrapper
-			.swiper-slide 1
-			.swiper-slide 2
-			.swiper-slide 3
 	+headerBlock()
+	+sVideo()
+	+sChars()
+	+sScheme()
+	+sSlider()
+	+sImportant()
+	+sAction()
+	+sUsefull()
+	+sDelivery()
+
 	+sForm()
 	+sContact()
 	+footer()
-      
-
-
-

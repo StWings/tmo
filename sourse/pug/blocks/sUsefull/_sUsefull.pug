@@ -1,0 +1,22 @@
+mixin sUsefull(data)
+	// start sUsefull
+	+b.SECTION.sUsefull.section#sUsefull&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Полезная информация
+			+e.row.row
+				+sUsefullItem(1, 'Рыба договора')
+				+sUsefullItem(2, 'Руководство по эксплуатации')
+				+sUsefullItem(3, 'Тены')
+	// end sUsefull
+
+mixin sUsefullItem(imgNum, title)
+	.col-md-4
+		+e.item(href="#")
+			+e.circle
+				+e.img-wrap
+					//no lazy here
+					img(src=`img/@2x/sUsefull-${imgNum}.png` alt="")
+			+e.title.text-center=title
+			+e.download
+				img(loading="lazy" src="img/@2x/download.png" alt="")

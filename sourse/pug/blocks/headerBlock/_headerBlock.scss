@@ -1,12 +1,237 @@
 // start .headerBlock
 .headerBlock {
-	&__{}
-	&__{}
-	&__{}
-	&__{}
-	&__{}
-	&__{}
+	background-color: $gray-800;
+	//min-height: calc(var(--vh, 1vh) * 100 - var(--header-h));
+	min-height: 800px;//!!
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+
+	padding: 10px 0;
+	@include media-breakpoint-up(lg){
+		padding: 100px 0 0;
+	}
+
+	display: flex;
+	flex-direction: column;
+	&__container{
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+	}
+	&__box{
+		margin-top: auto;
+	}
+	&__main-row{
+
+	}
+	&__col{
+		--col-py: #{rem(24)};
+		--col-px: #{rem(16)};
+		@include media-breakpoint-up(sm){
+			--col-py: #{rem(30)};
+			--col-px: #{rem(24)};
+		}
+
+		--white-col-w: 29.32%;
+		--black-col-w: calc(100% - var(--white-col-w));
+		&--white{
+			background-color: $white;
+			color: $black;
+
+			padding: var(--col-py) var(--col-px);
+			@include media-breakpoint-up(xl){
+				padding: rem(30) rem(34);
+				width: var(--white-col-w);
+			}
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			h1, h2{
+				color: inherit;
+				font-size: rem(26);
+				font-weight: 700;
+				margin-bottom: 0;
+			}
+		}
+		&--black{
+			background-color: $black;
+			color: $white;
+
+			padding: var(--col-py) var(--col-px);
+			@include media-breakpoint-up(xl){
+				padding: 32px 0px 33px 40px;
+				width: var(--black-col-w);
+			}
+		}
+	}
+	&__sub-row{
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(5)};
+		@include media-breakpoint-up(sm){
+			--bs-gutter-x: #{rem(30)};
+			--bs-gutter-y: #{rem(16)};
+		}
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(49)};
+			--bs-gutter-y: #{rem(18)};
+		}
+
+		& > *:nth-child(3n){
+			@include media-breakpoint-up(xl){
+				padding-right: var(--bs-gutter-x);
+			}
+		}
+	}
+	&__item{
+		&:hover{
+			--ball-hov-bg: #{$primary};
+		}
+	}
+	&__item-row{
+		--bs-gutter-x: #{rem(22)};
+		--bs-gutter-y: #{rem(20)};
+	}
+	&__col{
+		&--ball{
+
+		}
+		&--hint{
+			position: relative;
+			z-index: 1;
+		}
+	}
+	&__ball{
+		@include mt();
+		width: rem(47);
+		height: rem(47);
+		padding: 8px;
+		border-radius: 50%;
+
+		border: 1px solid var(--ball-hov-bg, #{$white});
+		//background-color: var(--ball-hov-bg, transparent);
+		background-color: transparent	;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__txt{
+		color: $white;
+		font-size: rem(14);
+		font-weight: 700;
+		line-height: calc(21/14);
+	}
+
+	//-
+
+	&__logo{
+		display: block;
+		width: rem(136);
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	//-
+	&__foot-txt{
+		color: $white;
+		font-size: rem(14);
+		line-height: calc(20/14);
+		padding: rem(15) 0;
+
+		span{
+			display: inline-block;
+			position: relative;
+			z-index: 1;
+
+			&:before,
+			&:after{
+				content: '';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 100vw;
+				height: 1px;
+				background-color: rgba($white, .5);
+			}
+			&:before{
+				left: calc(100% + #{rem(32)});
+			}
+			&:after{
+				right: calc(100% + #{rem(32)});
+			}
+
+		}
+	}
 	&__{}
 }
 
 // end.headerBlock
+
+//
+.hint{
+	position: absolute;
+	z-index: 2;
+	left: 60px;
+	top: -20px;
+
+	&:hover{
+		--hint-pe: auto;
+		--hint-o: 1;
+	}
+
+	&__ball{
+		width: rem(13);
+		height: rem(13);
+		border-radius: 50%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border: 1px solid $white;
+		color: $white;
+		font-size: rem(9);
+		font-weight: 500;
+	}
+	&__content{
+		@include mt();
+		pointer-events: var(--hint-pe, none);
+		opacity: var(--hint-o, 0);
+		position: absolute;
+		z-index: 2;
+		left: 100%;
+		top: 0;
+		--left-shift: 3px;
+		padding: rem(10) rem(10) rem(10) calc(#{rem(10)} + var(--left-shift));
+
+		color: $black;
+		font-size: rem(12);
+		font-weight: 500;
+		width: calc(#{rem(179)} + var(--left-shift));
+		height: auto;
+		&:before{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: var(--left-shift);
+			width: calc(100% - var(--left-shift));
+			height: 100%;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+			border-radius: rem(10);
+			background-color: $white;
+		}
+	}
+}

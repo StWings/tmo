@@ -1,0 +1,20 @@
+mixin sImportant(data)
+	// start sImportant
+	+b.SECTION.sImportant.section#sImportant&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Это важно!
+				p Необходимо иметь в виду
+			+e.row.row
+				+sImportantCard('Как подключить ТМО к источнику питания?')
+				+sImportantCard('Как подключить ТМО к источнику питания?')
+				+sImportantCard('Сколько кубических метров планируется залить единовременно?')
+				+sImportantCard('Как влияет размер / геометрия участка на подключение ТМО?')
+	// end sImportant
+
+mixin sImportantCard(title)
+	.col-sm-6.col-lg-3
+		+b.service-box
+			.service-icon=title
+			.service-content
+				p На полную мощность 1 шт ТМО требуется 80 кВт (160 Ампер)

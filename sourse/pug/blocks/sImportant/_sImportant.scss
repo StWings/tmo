@@ -1,0 +1,55 @@
+// start .sImportant
+.sImportant {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(45)};
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(24)};
+		--sPB: #{rem(51)};
+		--sTPB: #{rem(34)};
+	}
+
+	.section-title{
+		h2{
+			color: $black;
+			font-size: rem(40);
+			margin-bottom: rem(2);
+		}
+		p{
+			color: $black;
+			font-size: rem(21);
+			font-weight: 500;
+			line-height: calc(35/21);
+		}
+	}
+	&__row{}
+	.service-box{}
+	.service-icon{
+		border: 1px dashed $black;
+		background-color: $white;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		color: $black;
+		font-weight: 700;
+		line-height: calc(21/17);
+		text-align: center;
+	}
+	.service-content{
+		background-color: $primary;
+		color: $white!important;
+		font-size: rem(14);
+		font-weight: 500;
+		line-height: calc(21/14);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sImportant

@@ -8,67 +8,801 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
-		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class="main-page" data-bg="01.png">
 		<div class="main-wrapper">
-			<!-- start header-->
-			<header class="header" id="header">
-			</header>
-			<!-- end header-->
-			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
-				<div class="container">
-					<div class="row">
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-							</div>
+			<div class="menu-mobile menu-mobile--js d-lg-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				</div>
+				<div class="menu-mobile__inner">
+					<a class="menu-mobile__logo" href="/"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
+					</a>
+					<ul class="menu">
+						<li class="menu-item"><a href="#">Аренда</a></li>
+						<li class="menu-item"><a href="#">Условия аренды</a></li>
+						<li class="menu-item"><a href="#">Схема подключения</a></li>
+						<li class="menu-item"><a href="#">Важно</a></li>
+						<li class="menu-item"><a href="#">Акция</a></li>
+						<li class="menu-item"><a href="#">Информация</a></li>
+						<li class="menu-item"><a href="#">Отзывы</a></li>
+						<li class="menu-item"><a href="#">Калькулятор</a></li>
+						<li class="menu-item"><a href="#">Контакты</a></li>
+					</ul>
+					<div class="iconed-row row align-items-center">
+						<div class="col-auto">
+							<a class="iconed-row__icon back" href="tel:+79852203638">
+								<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/tell.svg" alt=""/></div>
+							</a>
 						</div>
-						<div class="col">
-							<div class="menu-mobile menu-mobile--js">
+						<div class="col-auto">
+							<a class="iconed-row__link" href="tel:+79852203638">+7 (985) 220-36-38
+							</a>
+						</div>
+						<div class="col-auto">
+							<a class="iconed-row__wa" href="#"><img loading="lazy" src="img/svg/whatsapp.svg" alt=""/>
+							</a>
+						</div>
+					</div>
+					<div class="iconed-row row align-items-center">
+						<div class="col-auto">
+							<a class="iconed-row__icon back" href="mailto:tmo80@bk.ru">
+								<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/mail.svg" alt=""/></div>
+							</a>
+						</div>
+						<div class="col-auto">
+							<a class="iconed-row__link" href="mailto:tmo80@bk.ru">tmo80@bk.ru
+							</a>
+						</div>
+					</div>
+					<a class="menu-mobile__btn link-modal-js btn-default btn-default-js" href="#modal-call">Заказать&nbsp;звонок
+					</a>
+				</div>
+			</div>
+			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header header--js" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="container">
+						<div class="top-nav__row row align-items-center">
+							<div class="col col-xl-auto">
+								<a class="top-nav__logo" href="/"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
+								</a>
+							</div>
+							<div class="col d-none d-xl-block">
+								<div class="top-nav__txt">Оборудование для прогрева бетона
+								</div>
+							</div>
+							<div class="top-nav__col col-auto d-none d-md-block tel-col">
+								<div class="iconed-row row align-items-center">
+									<div class="col-auto">
+										<a class="iconed-row__icon back" href="tel:+79852203638">
+											<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/tell.svg" alt=""/></div>
+										</a>
+									</div>
+									<div class="col-auto">
+										<a class="iconed-row__link" href="tel:+79852203638">+7 (985) 220-36-38
+										</a>
+									</div>
+									<div class="col-auto">
+										<a class="iconed-row__wa" href="#"><img loading="lazy" src="img/svg/whatsapp.svg" alt=""/>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="top-nav__col col-auto d-none d-lg-block">
+								<div class="iconed-row row align-items-center">
+									<div class="col-auto">
+										<a class="iconed-row__icon back" href="mailto:tmo80@bk.ru">
+											<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/mail.svg" alt=""/></div>
+										</a>
+									</div>
+									<div class="col-auto">
+										<a class="iconed-row__link" href="mailto:tmo80@bk.ru">tmo80@bk.ru
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-auto d-none d-sm-block">
+								<a class="top-nav__btn link-modal-js btn-default-js" href="#modal-call">Заказать&nbsp;звонок
+								</a>
+							</div>
+							<div class="col-auto d-lg-none">
 								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 								</div>
-								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
+			<!-- start topLine-->
+			<div class="topLine d-none d-lg-block" id="topLine">
+				<div class="container">
+					<ul class="menu">
+						<li class="menu-item"><a href="#">Аренда</a></li>
+						<li class="menu-item"><a href="#">Условия аренды</a></li>
+						<li class="menu-item"><a href="#">Схема подключения</a></li>
+						<li class="menu-item"><a href="#">Важно</a></li>
+						<li class="menu-item"><a href="#">Акция</a></li>
+						<li class="menu-item"><a href="#">Информация</a></li>
+						<li class="menu-item"><a href="#">Отзывы</a></li>
+						<li class="menu-item"><a href="#">Калькулятор</a></li>
+						<li class="menu-item"><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end topLine-->
+			<!-- start headerBlock-->
+			<div class="headerBlock section" id="headerBlock">
+				<div class="headerBlock__container container">
+					<div class="headerBlock__box">
+						<div class="headerBlock__main-row row gy-0 gx-0">
+							<div class="headerBlock__col headerBlock__col--white col-xl-auto col-lg-3">
+								<h1>Самый новый арендный парк в&nbsp;Москве 2017-2021</h1>
+							</div>
+							<div class="headerBlock__col headerBlock__col--black col-xl col-lg-9">
+								<div class="headerBlock__sub-row row align-items-center">
+									<div class="col-sm-6 col-md-4">
+										<div class="headerBlock__item">
+											<div class="headerBlock__item-row row align-items-center flex-nowrap">
+												<div class="headerBlock__col headerBlock__col--ball col-auto">
+													<div class="headerBlock__ball back">
+														<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/headerBlockItem-1.svg" alt=""/></div>
+													</div>
+												</div>
+												<div class="headerBlock__col headerBlock__col--hint col">
+													<div class="headerBlock__txt">Продажа ТМО
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="headerBlock__item">
+											<div class="headerBlock__item-row row align-items-center flex-nowrap">
+												<div class="headerBlock__col headerBlock__col--ball col-auto">
+													<div class="headerBlock__ball back">
+														<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/headerBlockItem-2.svg" alt=""/></div>
+													</div>
+												</div>
+												<div class="headerBlock__col headerBlock__col--hint col">
+													<div class="hint">
+														<div class="hint__ball">?
+														</div>
+														<div class="hint__content">Гарантированный выкуп купленного у нас оборудования
+														</div>
+													</div>
+													<div class="headerBlock__txt">Выкуп ТМО
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="headerBlock__item">
+											<div class="headerBlock__item-row row align-items-center flex-nowrap">
+												<div class="headerBlock__col headerBlock__col--ball col-auto">
+													<div class="headerBlock__ball back">
+														<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/headerBlockItem-3.svg" alt=""/></div>
+													</div>
+												</div>
+												<div class="headerBlock__col headerBlock__col--hint col">
+													<div class="headerBlock__txt">Режим работы 24/7
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="headerBlock__item">
+											<div class="headerBlock__item-row row align-items-center flex-nowrap">
+												<div class="headerBlock__col headerBlock__col--ball col-auto">
+													<div class="headerBlock__ball back">
+														<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/headerBlockItem-4.svg" alt=""/></div>
+													</div>
+												</div>
+												<div class="headerBlock__col headerBlock__col--hint col">
+													<div class="headerBlock__txt">Срочная доставка в день обращения
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="headerBlock__item">
+											<div class="headerBlock__item-row row align-items-center flex-nowrap">
+												<div class="headerBlock__col headerBlock__col--ball col-auto">
+													<div class="headerBlock__ball back">
+														<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/headerBlockItem-5.svg" alt=""/></div>
+													</div>
+												</div>
+												<div class="headerBlock__col headerBlock__col--hint col">
+													<div class="headerBlock__txt">Отгрузка в выходной день
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-4 d-none d-sm-block">
+										<div class="headerBlock__logo"><img loading="lazy" src="img/svg/gray-logo-txt.svg" alt=""/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="headerBlock__foot-txt text-center"><span>В арендном парке только масляные ТМО 2015-2020г</span>
+					</div>
+				</div>
+			</div>
+			<!-- end headerBlock-->
+			<!-- start sVideo-->
+			<div class="sVideo" id="sVideo">
+			</div>
+			<!-- end sVideo-->
+			<!-- start sChars-->
+			<section class="sChars section" id="sChars">
+				<div class="container">
+					<div class="sChars__row row">
+						<div class="col-lg-6">
+							<div class="sChars__sub-row row flex-sm-nowrap gy-5">
+								<div class="sChars__sub-col sChars__sub-col--left col-sm-6 col-xl-6">
+									<!-- picture-->
+									<picture class="sChars__img"> 
+										<source type="image/webp" srcset="img/@2x/webp/sChars-img-1.webp" media="(min-width:576px)"/>
+										<source type="image/webp" srcset="img/@1x/webp/sChars-img-1.webp"/>
+										<source type="image/png" srcset="img/@2x/sChars-img-1.png" media="(min-width:576px)"/>
+										<source type="image/png" srcset="img/@1x/sChars-img-1.png"/><img src="img/@2x/sChars-img-1.png" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+								</div>
+								<div class="sChars__sub-col sChars__sub-col--right col-sm-6 col-xl-6">
+									<h2 class="sChars__title text-center text-sm-start">ТМО-80
+									</h2>
+									<div class="sChars__chars">
+										<div class="sChars__char">
+											<div class="sChars__ch-row row align-items-center">
+												<div class="sChars__ch-col sChars__ch-col--ball col-auto">
+													<div class="sChars__ch-ball">
+													</div>
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--title col-auto">Мощность
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--dots col align-self-end">
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--val col-auto">80 кВА
+												</div>
+											</div>
+										</div>
+										<div class="sChars__char">
+											<div class="sChars__ch-row row align-items-center">
+												<div class="sChars__ch-col sChars__ch-col--ball col-auto">
+													<div class="sChars__ch-ball">
+													</div>
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--title col-auto">Напряжение
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--dots col align-self-end">
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--val col-auto">380 В
+												</div>
+											</div>
+										</div>
+										<div class="sChars__char">
+											<div class="sChars__ch-row row align-items-center">
+												<div class="sChars__ch-col sChars__ch-col--ball col-auto">
+													<div class="sChars__ch-ball">
+													</div>
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--title col-auto">Вес
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--dots col align-self-end">
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--val col-auto">665 кг
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sChars__foot-txt">В случае выхода из строя — бесплатная замена в течение 24 часов
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="sChars__sub-row row flex-sm-nowrap gy-5">
+								<div class="sChars__sub-col sChars__sub-col--left col-sm-6 col-xl-6">
+									<!-- picture-->
+									<picture class="sChars__img"> 
+										<source type="image/webp" srcset="img/@2x/webp/sChars-img-2.webp" media="(min-width:576px)"/>
+										<source type="image/webp" srcset="img/@1x/webp/sChars-img-2.webp"/>
+										<source type="image/png" srcset="img/@2x/sChars-img-2.png" media="(min-width:576px)"/>
+										<source type="image/png" srcset="img/@1x/sChars-img-2.png"/><img src="img/@2x/sChars-img-2.png" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+								</div>
+								<div class="sChars__sub-col sChars__sub-col--right col-sm-6 col-xl-6">
+									<h2 class="sChars__title text-center text-sm-start">ТМО-50
+									</h2>
+									<div class="sChars__chars">
+										<div class="sChars__char">
+											<div class="sChars__ch-row row align-items-center">
+												<div class="sChars__ch-col sChars__ch-col--ball col-auto">
+													<div class="sChars__ch-ball">
+													</div>
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--title col-auto">Мощность
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--dots col align-self-end">
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--val col-auto">50 кВА
+												</div>
+											</div>
+										</div>
+										<div class="sChars__char">
+											<div class="sChars__ch-row row align-items-center">
+												<div class="sChars__ch-col sChars__ch-col--ball col-auto">
+													<div class="sChars__ch-ball">
+													</div>
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--title col-auto">Напряжение
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--dots col align-self-end">
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--val col-auto">380/95-42 В
+												</div>
+											</div>
+										</div>
+										<div class="sChars__char">
+											<div class="sChars__ch-row row align-items-center">
+												<div class="sChars__ch-col sChars__ch-col--ball col-auto">
+													<div class="sChars__ch-ball">
+													</div>
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--title col-auto">Вес
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--dots col align-self-end">
+												</div>
+												<div class="sChars__ch-col sChars__ch-col--val col-auto">365 кг
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sChars__foot-txt">Возможность работы от дизельного генератора
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="charSlider">
+						<div class="charSlider__row row align-items-center">
+							<div class="charSlider__col charSlider__col--left col-lg-auto align-self-lg-start">
+								<div class="charSlider__title">Аренда ТМО-80
+								</div>
+								<div class="charSlider__info">Залог — 30 000 ₽
+									<div class="hint">
+										<div class="hint__ball">?
+										</div>
+										<div class="hint__content">Обеспечительный залог за каждую единицу оборудования
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="charSlider__col charSlider__col--right col-lg">
+								<div class="charSlider__slider-wrap">
+									<div class="swiper sChars-slider-js">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="charSlider__item">
+													<div class="charSlider__plate">Базовая ставка
+													</div>
+													<div class="charSlider__price">от 900  ₽/сутки
+													</div>
+													<div class="charSlider__descr">Минимальный срок аренды — 10 дней
+													</div>
+													<div class="charSlider__btn-cont">
+														<a class="charSlider__btn link-modal-js btn-default-js" href="#">Оставить&#160;заявку
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="charSlider__item">
+													<div class="charSlider__plate">Ставка плюс
+													</div>
+													<div class="charSlider__price">от 700  ₽/сутки
+													</div>
+													<div class="charSlider__descr">При аренде от 20 дней
+													</div>
+													<div class="charSlider__btn-cont">
+														<a class="charSlider__btn link-modal-js btn-default-js" href="#">Оставить&#160;заявку
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="charSlider__item">
+													<div class="charSlider__plate">Ставка выгодно
+													</div>
+													<div class="charSlider__price">от 500  ₽/сутки
+													</div>
+													<div class="charSlider__descr">При аренде от 4 штук
+													</div>
+													<div class="charSlider__btn-cont">
+														<a class="charSlider__btn link-modal-js btn-default-js" href="#">Оставить&#160;заявку
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="charSlider__item">
+													<div class="charSlider__plate">Супер экономия
+													</div>
+													<div class="charSlider__price">от 400  ₽/сутки
+													</div>
+													<div class="charSlider__descr">При аренде от 10 дней и аренде опалубки!
+													</div>
+													<div class="charSlider__btn-cont">
+														<a class="charSlider__btn link-modal-js btn-default-js" href="#">Оставить&#160;заявку
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sChars-->
+			<!-- start sScheme-->
+			<section class="sScheme section" id="sScheme">
+				<div class="container">
+					<!-- picture-->
+					<picture class="sScheme__bg"> 
+						<source type="image/webp" srcset="img/@2x/webp/sScheme-bg.webp" media="(min-width:576px)"/>
+						<source type="image/webp" srcset="img/@1x/webp/sScheme-bg.webp"/>
+						<source type="image/png" srcset="img/@2x/sScheme-bg.png" media="(min-width:576px)"/>
+						<source type="image/png" srcset="img/@1x/sScheme-bg.png"/><img src="img/@2x/sScheme-bg.png" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture-->
+					<div class="section-title text-center">
+						<h2>Схема подключения КТПТО (ТМО-80)</h2>
+					</div>
+					<!-- picture-->
+					<picture class="sScheme__img d-none d-xl-flex"> 
+						<source type="image/webp" srcset="img/@2x/webp/sScheme-img-big.webp" media="(min-width:576px)"/>
+						<source type="image/webp" srcset="img/@1x/webp/sScheme-img-big.webp"/>
+						<source type="image/png" srcset="img/@2x/sScheme-img-big.png" media="(min-width:576px)"/>
+						<source type="image/png" srcset="img/@1x/sScheme-img-big.png"/><img src="img/@2x/sScheme-img-big.png" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture-->
+					<!-- picture-->
+					<picture class="sScheme__img d-xl-none"> 
+						<source type="image/webp" srcset="img/@2x/webp/sScheme-img.webp" media="(min-width:576px)"/>
+						<source type="image/webp" srcset="img/@1x/webp/sScheme-img.webp"/>
+						<source type="image/png" srcset="img/@2x/sScheme-img.png" media="(min-width:576px)"/>
+						<source type="image/png" srcset="img/@1x/sScheme-img.png"/><img src="img/@2x/sScheme-img.png" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture-->
+					<div class="sScheme__row row">
+						<div class="col-6 col-lg-3">
+							<div class="sScheme__item">
+								<div class="sScheme__title">01. От источника тока к КТПТО-80
+								</div>
+								<ul class="sScheme__txt-list">
+									<li>не более 70 метров</li>
+									<li>3 фазы и заземление</li>
+								</ul>
+							</div>
+							<div class="sScheme__item">
+								<div class="sScheme__title">До 30м
+								</div>
+								<ul class="sScheme__txt-list">
+									<li>КГ 4*16 мм2</li>
+									<li>КГ 3*16 мм2 + 1*10 мм2</li>
+									<li>КГ 3*16 мм2  + 1*6 мм2</li>
+								</ul>
+							</div>
+							<div class="sScheme__item">
+								<div class="sScheme__title">От 30м до 70м
+								</div>
+								<ul class="sScheme__txt-list">
+									<li>КГ 4*25 мм2</li>
+									<li>КГ 3*25 мм2 + 1*16 мм2</li>
+									<li>КГ 3*25 мм2 + 1*10 мм2</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-6 col-lg-3">
+							<div class="sScheme__item">
+								<div class="sScheme__title">02. Магистральный провод
+								</div>
+								<ul class="sScheme__txt-list">
+									<li>не более 30 метров</li>
+									<li>Арматура не менее D22</li>
+									<li>АПКВ 1*35 мм2</li>
+									<li>АВВГ 4*16 мм2</li>
+									<li>АВВГ 4*25 мм2</li>
+									<li>Сварной кабель КГ от 70 мм2</li>
+									<li>(по Меди)</li>
+									<li>до 90 мм2  (по Алюминию)</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-6 col-lg-3">
+							<div class="sScheme__item">
+								<div class="sScheme__title">03. Холодные концы
+								</div>
+								<ul class="sScheme__txt-list">
+									<li>Не более 6 метров</li>
+									<li>АПВ 1*4 мм2</li>
+									<li>ПВ 1*1,5 мм2</li>
+									<li>ПВ 1*2,5 мм2</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-6 col-lg-3">
+							<div class="sScheme__item">
+								<div class="sScheme__title">04. Греющий провод
+								</div>
+								<ul class="sScheme__txt-list">
+									<li>ПНСВ 1*1,0 мм2</li>
+									<li>ПНСВ 1*1,2 мм2</li>
+									<li>ПНСВ 1*1,3 мм2</li>
+									<li>ПНСВ 1*1,4 мм2</li>
+									<li>ПТПЖ 2*1,2 мм2</li>
+									<li>ПТПЖ 2*1,3 мм2</li>
+									<li>ПТПЖ 2*1,4 мм2</li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- end top-nav-->
-			<!-- start topLine-->
-			<section class="topLine section" id="topLine">
+			</section>
+			<!-- end sScheme-->
+			<!-- start sSlider-->
+			<section class="sSlider section" id="sSlider">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>topLine</h2>
+					<div class="sSlider__slider-wrap">
+						<div class="swiper sSlider-slider-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a class="sSlider__img" href="img/@2x/sSlider-img-1.png" data-fancybox="sSliderSlide"><img loading="lazy" src="img/@2x/sSlider-img-1.png" alt=""/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSlider__img" href="img/@2x/sSlider-img-2.png" data-fancybox="sSliderSlide"><img loading="lazy" src="img/@2x/sSlider-img-2.png" alt=""/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSlider__img" href="img/@2x/sSlider-img-3.png" data-fancybox="sSliderSlide"><img loading="lazy" src="img/@2x/sSlider-img-3.png" alt=""/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSlider__img" href="img/@2x/sSlider-img-4.png" data-fancybox="sSliderSlide"><img loading="lazy" src="img/@2x/sSlider-img-4.png" alt=""/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSlider__img" href="img/@2x/sSlider-img-1.png" data-fancybox="sSliderSlide"><img loading="lazy" src="img/@2x/sSlider-img-1.png" alt=""/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSlider__img" href="img/@2x/sSlider-img-2.png" data-fancybox="sSliderSlide"><img loading="lazy" src="img/@2x/sSlider-img-2.png" alt=""/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSlider__img" href="img/@2x/sSlider-img-3.png" data-fancybox="sSliderSlide"><img loading="lazy" src="img/@2x/sSlider-img-3.png" alt=""/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSlider__img" href="img/@2x/sSlider-img-4.png" data-fancybox="sSliderSlide"><img loading="lazy" src="img/@2x/sSlider-img-4.png" alt=""/>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-scrollbar"></div>
+						</div>
 					</div>
-					<div class="row"></div>
+					<div class="sSlider__video"><iframe width="560" height="315" src="https://www.youtube.com/embed/4gWtivJ9SuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
 				</div>
 			</section>
-			<!-- end topLine-->
-			<div class="container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">1</div>
-					<div class="swiper-slide">2</div>
-					<div class="swiper-slide">3</div>
-				</div>
-			</div>
-			<!-- start headerBlock-->
-			<div class="headerBlock section" id="headerBlock">
+			<!-- end sSlider-->
+			<!-- start sImportant-->
+			<section class="sImportant section" id="sImportant">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>headerBlock ds dfsdfdsfsd</h2>
+						<h2>Это важно!</h2>
+						<p>Необходимо иметь в виду</p>
 					</div>
-					<div class="row"></div>
+					<div class="sImportant__row row">
+						<div class="col-sm-6 col-lg-3">
+							<div class="service-box">
+								<div class="service-icon">Как подключить ТМО к источнику питания?</div>
+								<div class="service-content">
+									<p>На полную мощность 1 шт ТМО требуется 80 кВт (160 Ампер)</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg-3">
+							<div class="service-box">
+								<div class="service-icon">Как подключить ТМО к источнику питания?</div>
+								<div class="service-content">
+									<p>На полную мощность 1 шт ТМО требуется 80 кВт (160 Ампер)</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg-3">
+							<div class="service-box">
+								<div class="service-icon">Сколько кубических метров планируется залить единовременно?</div>
+								<div class="service-content">
+									<p>На полную мощность 1 шт ТМО требуется 80 кВт (160 Ампер)</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg-3">
+							<div class="service-box">
+								<div class="service-icon">Как влияет размер / геометрия участка на подключение ТМО?</div>
+								<div class="service-content">
+									<p>На полную мощность 1 шт ТМО требуется 80 кВт (160 Ампер)</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
-			<!-- end headerBlock-->
+			</section>
+			<!-- end sImportant-->
+			<!-- start sAction-->
+			<section class="sAction section" id="sAction">
+				<div class="container">
+					<!-- picture-->
+					<picture class="sAction__bg"> 
+						<source type="image/webp" srcset="img/@2x/webp/sAction-bg.webp" media="(min-width:576px)"/>
+						<source type="image/webp" srcset="img/@1x/webp/sAction-bg.webp"/>
+						<source type="image/png" srcset="img/@2x/sAction-bg.png" media="(min-width:576px)"/>
+						<source type="image/png" srcset="img/@1x/sAction-bg.png"/><img src="img/@2x/sAction-bg.png" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture-->
+					<div class="section-title">
+						<h2>Акция!</h2>
+						<p>
+							ТМО
+							<span>БЕСПЛАТНО</span>
+							 при аренде опалубки
+						</p>
+					</div>
+					<div class="sAction__row row align-items-center">
+						<div class="col-sm-auto">
+							<a class="sAction__btn btn-default-js" href="#">Оставить&#160;заявку
+							</a>
+						</div>
+						<div class="col-sm-auto">
+							<a class="sAction__arrow-btn" href="https://opalubkapro.ru" target="_blank"><span>https://opalubkapro.ru</span>
+								<svg class="icon icon-chevron-right ">
+									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="sAction__foot-cont">
+						<div class="sAction__foot-row row justify-md-content-end justify-content-center">
+							<div class="col-auto">
+								<div class="sAction__ball"><img loading="lazy" src="img/@2x/sAction-foot-1.png" alt=""/>
+								</div>
+							</div>
+							<div class="col-auto">
+								<div class="sAction__ball"><img loading="lazy" src="img/@2x/sAction-foot-2.png" alt=""/>
+								</div>
+							</div>
+							<div class="col-auto">
+								<div class="sAction__ball"><img loading="lazy" src="img/@2x/sAction-foot-3.png" alt=""/>
+								</div>
+							</div>
+							<div class="col-auto">
+								<div class="sAction__ball"><img loading="lazy" src="img/@2x/sAction-foot-4.png" alt=""/>
+								</div>
+							</div>
+							<div class="col-auto">
+								<div class="sAction__ball"><img loading="lazy" src="img/@2x/sAction-foot-5.png" alt=""/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sAction-->
+			<!-- start sUsefull-->
+			<section class="sUsefull section" id="sUsefull">
+				<div class="sUsefull__container container">
+					<div class="section-title text-center">
+						<h2>Полезная информация</h2>
+					</div>
+					<div class="sUsefull__row row">
+						<div class="col-md-4">
+							<a class="sUsefull__item" href="#">
+								<div class="sUsefull__circle">
+									<div class="sUsefull__img-wrap">
+										<!--no lazy here--><img src="img/@2x/sUsefull-1.png" alt=""/>
+									</div>
+								</div>
+								<div class="sUsefull__title text-center">Рыба договора
+								</div>
+								<div class="sUsefull__download"><img loading="lazy" src="img/@2x/download.png" alt=""/>
+								</div>
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a class="sUsefull__item" href="#">
+								<div class="sUsefull__circle">
+									<div class="sUsefull__img-wrap">
+										<!--no lazy here--><img src="img/@2x/sUsefull-2.png" alt=""/>
+									</div>
+								</div>
+								<div class="sUsefull__title text-center">Руководство по эксплуатации
+								</div>
+								<div class="sUsefull__download"><img loading="lazy" src="img/@2x/download.png" alt=""/>
+								</div>
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a class="sUsefull__item" href="#">
+								<div class="sUsefull__circle">
+									<div class="sUsefull__img-wrap">
+										<!--no lazy here--><img src="img/@2x/sUsefull-3.png" alt=""/>
+									</div>
+								</div>
+								<div class="sUsefull__title text-center">Тены
+								</div>
+								<div class="sUsefull__download"><img loading="lazy" src="img/@2x/download.png" alt=""/>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sUsefull-->
+			<!-- start sDelivery-->
+			<section class="sDelivery section" id="sDelivery">
+				<!-- picture-->
+				<picture class="sDelivery__bg d-none d-md-flex"> 
+					<source type="image/webp" srcset="img/@2x/webp/sDelivery-bg.webp" media="(min-width:576px)"/>
+					<source type="image/webp" srcset="img/@1x/webp/sDelivery-bg.webp"/>
+					<source type="image/png" srcset="img/@2x/sDelivery-bg.png" media="(min-width:576px)"/>
+					<source type="image/png" srcset="img/@1x/sDelivery-bg.png"/><img src="img/@2x/sDelivery-bg.png" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
+				<div class="container">
+					<div class="sDelivery__row row">
+						<div class="sDelivery__col sDelivery__col--left col-lg-6 d-none d-lg-block">
+							<!-- picture-->
+							<picture class="sDelivery__img"> 
+								<source type="image/webp" srcset="img/@2x/webp/sDelivery-car.webp" media="(min-width:576px)"/>
+								<source type="image/webp" srcset="img/@1x/webp/sDelivery-car.webp"/>
+								<source type="image/png" srcset="img/@2x/sDelivery-car.png" media="(min-width:576px)"/>
+								<source type="image/png" srcset="img/@1x/sDelivery-car.png"/><img src="img/@2x/sDelivery-car.png" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sDelivery__col sDelivery__col--right col-lg-6">
+							<div class="section-title">
+								<h2>Срочная доставка в день обращения</h2>
+							</div>
+							<a class="sDelivery__btn btn-default-js" href="#">Оставить&#160;заявку
+							</a>
+							<div class="sDelivery__hot-txt">Не доставили в срок?! Доставка за наш счет
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sDelivery-->
 			<!-- start sForm-->
 			<section class="sForm section" id="sForm">
 				<div class="container">

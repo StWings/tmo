@@ -1,0 +1,33 @@
+mixin sAction(data)
+	// start sAction
+	+b.SECTION.sAction.section#sAction&attributes(attributes)
+		.container
+			+pic('sAction-bg.png')(class="sAction__bg")
+			+b.section-title
+				h2 Акция!
+				p
+					| ТМО
+					|
+					span БЕСПЛАТНО
+					|
+					|  при аренде опалубки
+			+e.row.row.align-items-center
+				.col-sm-auto
+					+e.btn.btn-default-js(href="#") Оставить&#160;заявку
+				.col-sm-auto
+					+e.arrow-btn(href="https://opalubkapro.ru" target="_blank")
+						span https://opalubkapro.ru
+						+icon('chevron-right')
+			+e.foot-cont
+				+e.foot-row.row.justify-md-content-end.justify-content-center
+					+sActionFootItem(1)
+					+sActionFootItem(2)
+					+sActionFootItem(3)
+					+sActionFootItem(4)
+					+sActionFootItem(5)
+	// end sAction
+
+mixin sActionFootItem(imgNum)
+	.col-auto
+		+e.ball
+			img(loading="lazy" src=`img/@2x/sAction-foot-${imgNum}.png` alt="")

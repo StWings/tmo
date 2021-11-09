@@ -2,6 +2,9 @@
 .header {
 	position: fixed;
 	//-position: absolute;
+	&.fixed{
+		--tn-box-shadow: 0 0 10px 0 #{rgba($black, .3)};
+	}
 
 	z-index: 900;
 	top: 0;

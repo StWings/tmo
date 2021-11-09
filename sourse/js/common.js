@@ -284,7 +284,8 @@ function eventHandler() {
 	window.addEventListener('resize', calcHeaderHeight, { passive: true });
 	window.addEventListener('scroll', calcHeaderHeight, { passive: true });
 	calcHeaderHeight();
-
+	window.setTimeout(calcHeaderHeight, 10);
+	window.setTimeout(calcHeaderHeight, 100);
 
 	let defaultSl = {
 		spaceBetween: 0,
@@ -321,6 +322,26 @@ function eventHandler() {
 		...defaultSl,
 		...freeMomentum,
 	});
+	//-
+	document.querySelectorAll('.btn-default-js').forEach(button => button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>');
+
+	//
+	let sCharsSlider = new Swiper('.sChars-slider-js', {
+		slidesPerView: "auto",
+	});
+
+	//-
+	let sSliderSlider = new Swiper('.sSlider-slider-js', {
+		slidesPerView: "auto",
+		spaceBetween: 30,
+
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			dragSize: 26,
+		},
+	});
+
 	// modal window
 
 };
