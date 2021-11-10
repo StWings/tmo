@@ -1,0 +1,29 @@
+mixin sMap(data)
+	// start sMap
+	+b.sMap.section#sMap&attributes(attributes)
+		.container
+			+e.box
+				+e.dd-items.dd-group-js
+					+sMapDDItem('Контакты', 'active')
+						+e.sub-box
+							p
+								span Адрес: Россия, 127204, г. Москва,
+								span Дмитровское ш.163А, к.2, БЦ «СК РОЯЛ»
+							p Контакты: +7 (495) 220-45-45
+							p E-mail: info2204545@mail.ru
+						+e.sub-box
+							p: b Склады:
+							p Cклад 1 - Химки-Долгопрудный: Лихачевское шоссе, микрорайон Левобережный, Химки, Московская область, Россия
+							p Склад 2 - Мытищи: посёлок Нагорное, с23/Л, городской округ Мытищи, Московская область, Россия
+					+sMapDDItem('Реквизиты', '')
+		+e.map
+	// end sMap
+
+mixin sMapDDItem(title, addClass='')
+	+e.dd-item(class=addClass)
+		+e.dd-head.dd-head-js=title
+		+e.dd-content.dd-content-js(class=addClass)
+			if block
+				block
+			else
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, velit.

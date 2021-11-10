@@ -489,6 +489,44 @@ iframe {
 		object-fit: cover;
 	}
 }
+//-
+.ratio-hover{
+	&:hover{
+		--img-hover-o: 1;
+	}
+
+	&:after{
+		@include mt();
+		opacity: var(--img-hover-o, 0);
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		content: '';
+		width: rem(40);
+		height: rem(40);
+
+		background-image: url(../img/svg/plus.svg);
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	&:before{
+		content: '';
+		@include mt();
+		opacity: var(--img-hover-o, 0);
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($black, .7);
+	}
+}
+
 //
 .btn-default{
 	@extend .btn;
@@ -548,9 +586,11 @@ iframe {
 			transition: transform var(--duration) ease;
 			transform: translateY(var(--m)) translateZ(0);
 			$i: 1;
-			@while $i < 22 {
+			//22
+			@while $i < 44 {
 				&:nth-child(#{$i}) {
-					transition-delay: calc(#{$i}s / 40);
+					//40
+					transition-delay: calc(#{$i}s / 80);
 				}
 				$i: $i + 1;
 			}

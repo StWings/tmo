@@ -1,0 +1,56 @@
+// start .sFeedback
+.sFeedback {
+	--sPT: #{rem(40)};
+	--sPB: #{rem(45)};
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(50)};
+		--sPB: #{rem(50)};
+		--sTPB: #{rem(40)};
+	}
+
+	.section-title{
+		h2{
+			font-size: rem(40);
+		}
+	}
+
+	//-
+	&__slider-wrap{
+		.swiper{
+
+		}
+		.swiper-wrapper{
+			margin-bottom: rem(27);
+		}
+		.swiper-slide{
+			width: rem(263);
+			@include media-breakpoint-up(md){
+				width: calc(100%/3);
+			}
+			@include media-breakpoint-up(lg){
+				width: calc(100%/4);
+			}
+			padding: rem(20);
+
+			border: 1px solid $gray-110;
+			border-right: 0;
+
+			border-right: none;
+			&:last-child{
+				border-right: 1px solid $gray-110;
+			}
+		}
+	}
+	&__img{
+		@extend .accept-ratio-frame;
+		@extend .ratio-hover;
+		padding-top: 136%;
+		border: 1px solid $gray-110;
+	}
+
+	//-
+	&__{}
+	&__{}
+	&__{}
+} // end.sFeedback

@@ -2,21 +2,24 @@ mixin sSlider(data)
 	// start sSlider
 	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
 		.container
+			if data.title
+				+b.section-title
+					h2=data.title
 			+e.slider-wrap
 				.swiper.sSlider-slider-js
 					.swiper-wrapper
 						-for(var i = 0; i < 2; i++)
-							+sSliderSlide(1)
-							+sSliderSlide(2)
-							+sSliderSlide(3)
-							+sSliderSlide(4)
+							+sSliderSlide(1, data.dataFancy, data.imgName)
+							+sSliderSlide(2, data.dataFancy, data.imgName)
+							+sSliderSlide(3, data.dataFancy, data.imgName)
+							+sSliderSlide(4, data.dataFancy, data.imgName)
 					.swiper-scrollbar
+			if data.video
 			+e.video
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/4gWtivJ9SuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 	// end sSlider
 
-mixin sSliderSlide(imgNum)
+mixin sSliderSlide(imgNum, dataFancy='sSliderSlide', imgName='sSlider-img-')
 	.swiper-slide
-		+e.img(href=`img/@2x/sSlider-img-${imgNum}.png` data-fancybox="sSliderSlide")
-			img(loading="lazy" src=`img/@2x/sSlider-img-${imgNum}.png` alt="")
+		+e.img(href=`img/@2x/${imgName+imgNum}.png` data-fancybox=dataFancy)
+			img(loading="lazy" src=`img/@2x/${imgName+imgNum}.png` alt="")

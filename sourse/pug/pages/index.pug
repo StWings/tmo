@@ -1,6 +1,5 @@
 extends layout/main.pug
 
-
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sVideo/_sVideo.pug
@@ -11,6 +10,9 @@ include ../blocks/sImportant/_sImportant.pug
 include ../blocks/sAction/_sAction.pug
 include ../blocks/sUsefull/_sUsefull.pug
 include ../blocks/sDelivery/_sDelivery.pug
+include ../blocks/sFeedback/_sFeedback.pug
+include ../blocks/sCalc/_sCalc.pug
+include ../blocks/sMap/_sMap.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -28,12 +30,16 @@ block pagecontent
 	+sVideo()
 	+sChars()
 	+sScheme()
-	+sSlider()
+	+sSlider({
+		video: true,
+		imgName: 'sSlider-img-',
+		dataFancy: 'sSliderSlide',
+	})
 	+sImportant()
 	+sAction()
 	+sUsefull()
 	+sDelivery()
-
-	+sForm()
-	+sContact()
+	+sFeedback()
+	+sCalc()
+	+sMap()
 	+footer()

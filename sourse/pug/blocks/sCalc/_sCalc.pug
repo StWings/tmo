@@ -1,0 +1,34 @@
+mixin sCalc(data)
+	// start sCalc
+	+b.SECTION.sCalc.section#sCalc&attributes(attributes)
+		+pic('sCalc-bg.png')(class="sCalc__bg")
+		.container
+			+b.section-title.text-center
+				h2 Рассчитать стоимость
+			+e.row.row.justify-content-center
+				+e.col--left.col-auto
+					+e.range-wrap
+						+range('1', '50', 'Штук', '30')
+					+e.range-wrap
+						+range('1', '500', 'Дней', '100')
+				+e.col--right.col-auto
+					+e.circle
+						+e.img
+							img(loading="lazy" src="img/svg/sCalc.svg" alt="")
+						+e.price 900 ₽
+						+e.p-txt сутки
+			.text-center
+				+e.btn.btn-default-js.link-modal-js(href="#") Получить&#160;коммерческое&#160;предложение
+	// end sCalc
+
+mixin range(c1, c2, title, val='1')
+	+b.range-wrap.price_slider_amount&attributes(attributes)
+		+e.row.row.align-items-center
+			.col
+				+e.title=title
+			.col-auto
+				+e.amount
+					+e.btn--min.amount-min-btn-js
+					+e.INPUT.input.form-control.amount-inp-js(type='number' value=val)
+					+e.btn--plus.amount-plus-btn-js
+		input.range-slider.slider-js(type='text'  data-min=c1  data-max=c2 value=val)

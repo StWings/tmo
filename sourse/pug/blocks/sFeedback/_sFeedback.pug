@@ -1,0 +1,21 @@
+mixin sFeedback(data)
+	// start sFeedback
+	+b.SECTION.sFeedback.section#sFeedback&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Отзывы и благодарности
+			+e.slider-wrap
+				.swiper.sFeedback-slider-js
+					.swiper-wrapper
+						-for(var i = 0; i < 2; i++)
+							+sFeedbackSlide(1)
+							+sFeedbackSlide(2)
+							+sFeedbackSlide(3)
+							+sFeedbackSlide(4)
+					.swiper-scrollbar
+	// end sFeedback
+
+mixin sFeedbackSlide(imgNum)
+	.swiper-slide
+		+e.img(href=`img/@2x/sFeedback-${imgNum}.png` data-fancybox='sFeedback')
+			img(loading="lazy" src=`img/@2x/sFeedback-${imgNum}.png` alt="")

@@ -11,6 +11,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page" data-bg="01.png">
@@ -771,13 +772,14 @@
 			<!-- start sDelivery-->
 			<section class="sDelivery section" id="sDelivery">
 				<!-- picture-->
-				<picture class="sDelivery__bg d-none d-md-flex"> 
+				<picture class="sDelivery__bg"> 
 					<source type="image/webp" srcset="img/@2x/webp/sDelivery-bg.webp" media="(min-width:576px)"/>
 					<source type="image/webp" srcset="img/@1x/webp/sDelivery-bg.webp"/>
 					<source type="image/png" srcset="img/@2x/sDelivery-bg.png" media="(min-width:576px)"/>
 					<source type="image/png" srcset="img/@1x/sDelivery-bg.png"/><img src="img/@2x/sDelivery-bg.png" alt="" loading="lazy"/>
 				</picture>
 				<!-- /picture-->
+				<div class="sDelivery__row row"></div>
 				<div class="container">
 					<div class="sDelivery__row row">
 						<div class="sDelivery__col sDelivery__col--left col-lg-6 d-none d-lg-block">
@@ -794,35 +796,173 @@
 							<div class="section-title">
 								<h2>Срочная доставка в день обращения</h2>
 							</div>
-							<a class="sDelivery__btn btn-default-js" href="#">Оставить&#160;заявку
+							<a class="sDelivery__btn btn-default-js link-modal-js" href="#">Оставить&#160;заявку
 							</a>
-							<div class="sDelivery__hot-txt">Не доставили в срок?! Доставка за наш счет
+							<div class="sDelivery__hot-txt">
+								<div class="sDelivery__hot-inner">Не доставили в срок?! Доставка за наш счет
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- end sDelivery-->
-			<!-- start sForm-->
-			<section class="sForm section" id="sForm">
+			<!-- start sFeedback-->
+			<section class="sFeedback section" id="sFeedback">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>sForm</h2>
+						<h2>Отзывы и благодарности</h2>
 					</div>
-					<div class="row"></div>
+					<div class="sFeedback__slider-wrap">
+						<div class="swiper sFeedback-slider-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a class="sFeedback__img" href="img/@2x/sFeedback-1.png" data-fancybox="sFeedback"><img loading="lazy" src="img/@2x/sFeedback-1.png" alt=""/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sFeedback__img" href="img/@2x/sFeedback-2.png" data-fancybox="sFeedback"><img loading="lazy" src="img/@2x/sFeedback-2.png" alt=""/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sFeedback__img" href="img/@2x/sFeedback-3.png" data-fancybox="sFeedback"><img loading="lazy" src="img/@2x/sFeedback-3.png" alt=""/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sFeedback__img" href="img/@2x/sFeedback-4.png" data-fancybox="sFeedback"><img loading="lazy" src="img/@2x/sFeedback-4.png" alt=""/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sFeedback__img" href="img/@2x/sFeedback-1.png" data-fancybox="sFeedback"><img loading="lazy" src="img/@2x/sFeedback-1.png" alt=""/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sFeedback__img" href="img/@2x/sFeedback-2.png" data-fancybox="sFeedback"><img loading="lazy" src="img/@2x/sFeedback-2.png" alt=""/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sFeedback__img" href="img/@2x/sFeedback-3.png" data-fancybox="sFeedback"><img loading="lazy" src="img/@2x/sFeedback-3.png" alt=""/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sFeedback__img" href="img/@2x/sFeedback-4.png" data-fancybox="sFeedback"><img loading="lazy" src="img/@2x/sFeedback-4.png" alt=""/>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-scrollbar"></div>
+						</div>
+					</div>
 				</div>
 			</section>
-			<!-- end sForm-->
-			<!-- start sContact-->
-			<section class="sContact section" id="sContact">
+			<!-- end sFeedback-->
+			<!-- start sCalc-->
+			<section class="sCalc section" id="sCalc">
+				<!-- picture-->
+				<picture class="sCalc__bg"> 
+					<source type="image/webp" srcset="img/@2x/webp/sCalc-bg.webp" media="(min-width:576px)"/>
+					<source type="image/webp" srcset="img/@1x/webp/sCalc-bg.webp"/>
+					<source type="image/png" srcset="img/@2x/sCalc-bg.png" media="(min-width:576px)"/>
+					<source type="image/png" srcset="img/@1x/sCalc-bg.png"/><img src="img/@2x/sCalc-bg.png" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>sContact</h2>
+						<h2>Рассчитать стоимость</h2>
 					</div>
-					<div class="row"></div>
+					<div class="sCalc__row row justify-content-center">
+						<div class="sCalc__col sCalc__col--left col-auto">
+							<div class="sCalc__range-wrap">
+								<div class="range-wrap price_slider_amount">
+									<div class="range-wrap__row row align-items-center">
+										<div class="col">
+											<div class="range-wrap__title">Штук
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="range-wrap__amount">
+												<div class="range-wrap__btn range-wrap__btn--min amount-min-btn-js">
+												</div><input class="range-wrap__input form-control amount-inp-js" type="number" value="30"/>
+												<div class="range-wrap__btn range-wrap__btn--plus amount-plus-btn-js">
+												</div>
+											</div>
+										</div>
+									</div>
+									<input class="range-slider slider-js" type="text" data-min="1" data-max="50" value="30"/>
+								</div>
+							</div>
+							<div class="sCalc__range-wrap">
+								<div class="range-wrap price_slider_amount">
+									<div class="range-wrap__row row align-items-center">
+										<div class="col">
+											<div class="range-wrap__title">Дней
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="range-wrap__amount">
+												<div class="range-wrap__btn range-wrap__btn--min amount-min-btn-js">
+												</div><input class="range-wrap__input form-control amount-inp-js" type="number" value="100"/>
+												<div class="range-wrap__btn range-wrap__btn--plus amount-plus-btn-js">
+												</div>
+											</div>
+										</div>
+									</div>
+									<input class="range-slider slider-js" type="text" data-min="1" data-max="500" value="100"/>
+								</div>
+							</div>
+						</div>
+						<div class="sCalc__col sCalc__col--right col-auto">
+							<div class="sCalc__circle">
+								<div class="sCalc__img"><img loading="lazy" src="img/svg/sCalc.svg" alt=""/>
+								</div>
+								<div class="sCalc__price">900 ₽
+								</div>
+								<div class="sCalc__p-txt">сутки
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-center">
+						<a class="sCalc__btn btn-default-js link-modal-js" href="#">Получить&#160;коммерческое&#160;предложение
+						</a>
+					</div>
 				</div>
 			</section>
-			<!-- end sContact-->
+			<!-- end sCalc-->
+			<!-- start sMap-->
+			<div class="sMap section" id="sMap">
+				<div class="container">
+					<div class="sMap__box">
+						<div class="sMap__dd-items dd-group-js">
+							<div class="sMap__dd-item active">
+								<div class="sMap__dd-head dd-head-js">Контакты
+								</div>
+								<div class="sMap__dd-content dd-content-js active">
+									<div class="sMap__sub-box">
+										<p><span>Адрес: Россия, 127204, г. Москва,</span><span>Дмитровское ш.163А, к.2, БЦ «СК РОЯЛ»</span></p>
+										<p>Контакты: +7 (495) 220-45-45</p>
+										<p>E-mail: info2204545@mail.ru</p>
+									</div>
+									<div class="sMap__sub-box">
+										<p><b>Склады:</b></p>
+										<p>Cклад 1 - Химки-Долгопрудный: Лихачевское шоссе, микрорайон Левобережный, Химки, Московская область, Россия</p>
+										<p>Склад 2 - Мытищи: посёлок Нагорное, с23/Л, городской округ Мытищи, Московская область, Россия</p>
+									</div>
+								</div>
+							</div>
+							<div class="sMap__dd-item">
+								<div class="sMap__dd-head dd-head-js">Реквизиты
+								</div>
+								<div class="sMap__dd-content dd-content-js">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, velit.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sMap__map">
+				</div>
+			</div>
+			<!-- end sMap-->
 			<footer class="footer">
 				<div class="container">
 					<div class="row">
@@ -862,7 +1002,8 @@
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
-		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

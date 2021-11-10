@@ -341,6 +341,126 @@ function eventHandler() {
 			dragSize: 26,
 		},
 	});
+	//
+	let sFeedbackSlider = new Swiper('.sFeedback-slider-js', {
+		slidesPerView: "auto",
+		spaceBetween: 0,
+
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			dragSize: 26,
+		},
+	});
+	// rangle sliders
+	function currencyFormat(num) {
+		return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
+	}
+	$(".range-wrap").each(function () {
+		let _this = $(this);
+		var $range= _this.find(".slider-js");
+		// var $inputFrom = _this.find(".input_from");
+		// var $inputTo = _this.find(".input_to");
+
+		let $amountInp = _this.find('.amount-inp-js');
+		let $minBtn = _this.find('.amount-min-btn-js');
+		let $plusBtn = _this.find('.amount-plus-btn-js');
+		var instance, from, to,
+			min = $range.data('min'),
+			max = $range.data('max');
+
+		$range.ionRangeSlider({
+			skin: "round",
+			grid: false,
+			grid_snap: false,
+			hide_min_max: false,
+			//hide_from_to: true,
+			//here
+			onStart: updateInputs,
+			onChange: updateInputs,
+			onFinish: updateInputs
+		});
+		instance = $range.data("ionRangeSlider");
+
+		function updateInputs(data) {
+			from = data.from;
+			to = data.to;
+			$amountInp.prop("value", currencyFormat(from));
+
+			//
+			// $inputFrom.prop("value", currencyFormat(from));
+			// $inputTo.prop("value", currencyFormat(to));
+			// InputFormat();
+		}
+
+		$amountInp.on("change input ", function () {
+			var val = +($(this).prop("value").replace(/\s/g, ''));
+			// validate
+			if (val < min) {
+				val = min;
+			} else if (val > to) {
+				val = to;
+			}
+
+			instance.update({
+				from: val
+			});
+			$(this).prop("value", currencyFormat(val));
+			console.log(val)
+		});
+		$minBtn.on("click", function (){
+			let newVal = Number($amountInp.prop("value")) - 1;
+			if (newVal > Number(min) && newVal < Number(max)){
+				$amountInp.prop("value", newVal);
+				instance.update({
+					from: newVal
+				});
+			}
+		});
+		$plusBtn.on("click", function (){
+			let newVal = Number($amountInp.prop("value")) + 1;
+			if (newVal > Number(min) && newVal < Number(max)){
+				$amountInp.prop("value", newVal);
+				instance.update({
+					from: newVal
+				});
+			}
+
+		});
+
+		// $inputFrom.on("change input ", function () {
+		// 	var val = +($(this).prop("value").replace(/\s/g, ''));
+		// 	// validate
+		// 	if (val < min) {
+		// 		val = min;
+		// 	} else if (val > to) {
+		// 		val = to;
+		// 	}
+		//
+		// 	instance.update({
+		// 		from: val
+		// 	});
+		// 	$(this).prop("value", currencyFormat(val));
+		// 	console.log(val)
+		// });
+		//
+		// $inputTo.on("change input ", function () {
+		// 	var val = +($(this).prop("value").replace(/\s/g, ''));
+		//
+		// 	// validate
+		// 	if (val < from) {
+		// 		val = from;
+		// 	} else if (val > max) {
+		// 		val = max;
+		// 	}
+		//
+		// 	instance.update({
+		// 		to: val
+		// 	});
+		// 	$(this).prop("value", currencyFormat(val));
+		// });
+
+	});
 
 	// modal window
 

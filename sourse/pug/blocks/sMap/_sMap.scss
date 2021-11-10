@@ -1,0 +1,34 @@
+// start .sMap
+.sMap {
+	--sPT: #{rem(40)};
+	--sPB: #{rem(45)};
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(50)};
+		--sPB: #{rem(90)};
+		--sTPB: #{rem(40)};
+	}
+
+	&__box{}
+	&__dd-items{}
+	&__dd-item{}
+	&__dd-head{}
+	&__dd-content{}
+	&__sub-box{
+		p{
+			span{
+
+			}
+			b{
+
+			}
+		}
+	}
+	&__map{
+
+	}
+
+	//
+	&__{}
+	&__{}
+} // end.sMap

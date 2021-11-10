@@ -5,11 +5,10 @@
 	--sTPB: #{rem(30)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(102)};
-		--sPB: #{rem(64)};
+		--sPB: #{rem(60)};
 		--sTPB: #{rem(52)};
 	}
 
-	background-color: $gray-110;
 	position: relative;
 	z-index: 1;
 	&__bg{

@@ -2,7 +2,8 @@ mixin sDelivery(data)
 	// start sDelivery
 	+b.SECTION.sDelivery.section#sDelivery&attributes(attributes)
 		//-
-		+pic('sDelivery-bg.png')(class="sDelivery__bg d-none d-md-flex")
+		+pic('sDelivery-bg.png')(class="sDelivery__bg")
+		.sDelivery__row.row
 		.container
 			+e.row.row
 				+e.col--left.col-lg-6.d-none.d-lg-block
@@ -10,7 +11,8 @@ mixin sDelivery(data)
 				+e.col--right.col-lg-6
 					+b.section-title
 						h2 Срочная доставка в день обращения
-					+e.btn.btn-default-js(href="#") Оставить&#160;заявку
-					+e.hot-txt Не доставили в срок?! Доставка за наш счет
+					+e.btn.btn-default-js.link-modal-js(href="#") Оставить&#160;заявку
+					+e.hot-txt
+						+e.hot-inner Не доставили в срок?! Доставка за наш счет
 
 	// end sDelivery
