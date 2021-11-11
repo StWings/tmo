@@ -1,7 +1,14 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
+		+e.video-wrap
+			<video class="fillItUp video" id="bgvid" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+				<source src="video/video.mp4" loading="lazy" type="video/mp4"/>
+				<source src="video/video.ogv" loading="lazy" type="video/ogv"/>
+				<source src="video/video.webm" loading="lazy" type="video/webm"/>
+			</video>
 		+e.container.container
+			+e.btn.link-modal-js.btn-default-js(href="#modal-call") Оставить&#160;заявку
 			+e.box
 				+e.main-row.row.gy-0.gx-0
 					+e.col--white.col-xl-auto.col-lg-3

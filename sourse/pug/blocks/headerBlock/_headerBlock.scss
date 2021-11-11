@@ -1,16 +1,41 @@
 // start .headerBlock
 .headerBlock {
 	background-color: $gray-800;
-	//min-height: calc(var(--vh, 1vh) * 100 - var(--header-h));
-	min-height: 800px;//!!
+
+	//!!
+	min-height: 800px;
+	@include media-breakpoint-up(xl){
+		min-height: calc(var(--vh, 1vh) * 100 - var(--header-h));
+	}
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
+
 
 	padding: 10px 0;
 	@include media-breakpoint-up(lg){
 		padding: 100px 0 0;
 	}
+
+	//-
+	&__video-wrap{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		video{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
 
 	display: flex;
 	flex-direction: column;
@@ -19,6 +44,16 @@
 		display: flex;
 		flex-direction: column;
 	}
+	&__btn{
+		@extend .btn-default;
+		margin: auto;
+		@media (min-width: 1440px){
+			transform: translateY(107px);
+		}
+
+		width: auto;
+	}
+
 	&__box{
 		margin-top: auto;
 	}

@@ -1,43 +1,112 @@
 .footer {
-		
 	margin-top: auto;
+	padding: rem(20) 0;
+	@include media-breakpoint-up(xl){
+		padding: rem(14) 0;
+	}
+	background-color: $gray-910;
+	color: $white;
 
-// 
-@include media-breakpoint-up(xl) {}
+	//
+	&__row{
+		--bs-gutter-x: #{rem(24)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(50)};
+		}
+		--bs-gutter-y: #{rem(10)};
+		@include media-breakpoint-up(md){
+			--bs-gutter-y: #{rem(20)};
+		}
+	}
+	&__col{
+		&--policy{
+			@include media-breakpoint-up(xl){
+				width: 28.5% !important;
+			}
+		}
+		&--tell{
+			@include media-breakpoint-up(xl){
+				width: 19.2% !important;
+				padding-right: 10px;
+			}
+		}
+		&--mail{
+			@include media-breakpoint-up(xl){
+				width: 19.2% !important;
+				padding-right: 10px;
+			}
+		}
+		&--create{
 
-@include media-breakpoint-up(lg) {}
+		}
+	}
+	&__policy{
+		color: $white;
+		font-size: rem(14);
+		font-weight: 500;
+		line-height: calc(21/14);
 
-@include media-breakpoint-up(md) {}
+		span{
+			display: block;
+		}
+		a{
+			color: $white;
 
-@include media-breakpoint-up(sm) {}
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	//
+	.iconed-row{
+		--bs-gutter-x: #{rem(12)};
+		&__icon{
+			border-color: $white;
+		}
+		&__link{
+			font-size: rem(14);
 
-@include media-breakpoint-up(xs) {}
+			color: $white;
+			&:hover{
+				color: $primary;
+			}
+		}
+	}
 
+	//-
+	&__sub-row{
+		--bs-gutter-x: #{rem(24)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(50)};
+		}
+	}
+	&__creator{
+		color: $white;
+		font-size: rem(14);
+		font-weight: 500;
+		line-height: calc(21/14);
+	}
+	&__scroll-top{
+		cursor: pointer;
+		border-radius: 50%;
+		width: rem(35);
+		height: rem(35);
+		margin: 0;
+		border: 1px solid $white;
 
-// 
-@include media-breakpoint-between(md, xl) {}
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
+		.icon{
+			font-size: rem(8);
+		}
 
-// 
-@include media-breakpoint-only(xs) {}
-
-@include media-breakpoint-only(sm) {}
-
-@include media-breakpoint-only(md) {}
-
-@include media-breakpoint-only(lg) {}
-
-@include media-breakpoint-only(xl) {}
-
-
-// 
-@include media-breakpoint-down(xl) {}
-
-@include media-breakpoint-down(lg) {}
-
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
+		--backplate-col: transparent;
+		//.back-wrap{}
+	}
+	//
+	&__{}
+	&__{}
 }

@@ -1,31 +1,153 @@
 // start .sMap
 .sMap {
-	--sPT: #{rem(40)};
-	--sPB: #{rem(45)};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
 	--sTPB: #{rem(30)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(50)};
-		--sPB: #{rem(90)};
+		--sPB: #{rem(50)};
 		--sTPB: #{rem(40)};
 	}
 
-	&__box{}
-	&__dd-items{}
-	&__dd-item{}
-	&__dd-head{}
-	&__dd-content{}
-	&__sub-box{
-		p{
-			span{
+	position: relative;
+	z-index: 1;
+	&__box{
+		@include media-breakpoint-down(md){
+			width: 100vw;
+			left: calc(-1 * (100vw - 100%) / 2);
+		}
 
+		position: relative;
+		background-color: $white;
+		@include media-breakpoint-up(md){
+			width: rem(361);
+			min-height: rem(491);
+			z-index: 2;
+		}
+		padding: rem(30);
+		@include media-breakpoint-up(xl){
+			padding: 26px 30px 30px 30px;
+		}
+	}
+	&__dd-items{
+
+	}
+	&__dd-item{
+		margin-bottom: rem(21);
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		&.active{
+			--plus-aft-o: 0;
+		}
+	}
+	&__dd-head{
+		cursor: pointer;
+		color: $black;
+		font-weight: 600;
+		line-height: calc(20/17);
+		//-margin-bottom: rem(20);
+		padding-right: rem(20);
+
+		position: relative;
+		z-index: 1;
+		&:before,
+		&:after{
+			@include mt();
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: $black;
+		}
+		&:before{
+			right: 0;
+			width: 16px;
+			height: 2px;
+		}
+		&:after{
+			opacity: var(--plus-aft-o, 1);
+			right: 7px;
+			height: 16px;
+			width: 2px;
+		}
+	}
+	&__dd-content{
+		padding-top: rem(20);
+		color: $black;
+		font-size: rem(14);
+		font-weight: 500;
+
+		display: none;
+		&.active{
+			display: block;
+		}
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		p{
+			margin-bottom: rem(12px);
+
+			span{
+				display: block;
 			}
 			b{
 
 			}
 		}
+
+		a{
+			color: $black;
+		}
+	}
+	&__sub-box{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		@include media-breakpoint-up(xl){
+			padding-right: rem(5);
+		}
+		margin-bottom: rem(27);
+		padding-bottom: rem(27);
+		border-bottom: 1px solid $black;
+
+		&:last-child{
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+
 	}
 	&__map{
+		background-color: $gray-800;
 
+		@include media-breakpoint-down(md){
+			width: 100vw;
+			left: calc(-1 * (100vw - 100%) / 2);
+			position: relative;
+			height: rem(480);
+		}
+		@include media-breakpoint-up(md){
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		& > * {
+			position: absolute !important;
+			top: 0 !important;
+			left: 0 !important;
+			width: 100% !important;
+			height: 100% !important;
+		}
 	}
 
 	//

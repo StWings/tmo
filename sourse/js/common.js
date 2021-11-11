@@ -255,7 +255,7 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume();
 	JSCCommon.mobileMenu();
-	// JSCCommon.inputMask();
+	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
@@ -359,8 +359,6 @@ function eventHandler() {
 	$(".range-wrap").each(function () {
 		let _this = $(this);
 		var $range= _this.find(".slider-js");
-		// var $inputFrom = _this.find(".input_from");
-		// var $inputTo = _this.find(".input_to");
 
 		let $amountInp = _this.find('.amount-inp-js');
 		let $minBtn = _this.find('.amount-min-btn-js');
@@ -374,8 +372,6 @@ function eventHandler() {
 			grid: false,
 			grid_snap: false,
 			hide_min_max: false,
-			//hide_from_to: true,
-			//here
 			onStart: updateInputs,
 			onChange: updateInputs,
 			onFinish: updateInputs
@@ -383,14 +379,7 @@ function eventHandler() {
 		instance = $range.data("ionRangeSlider");
 
 		function updateInputs(data) {
-			from = data.from;
-			to = data.to;
-			$amountInp.prop("value", currencyFormat(from));
-
-			//
-			// $inputFrom.prop("value", currencyFormat(from));
-			// $inputTo.prop("value", currencyFormat(to));
-			// InputFormat();
+			$amountInp.prop("value", currencyFormat(data.from));
 		}
 
 		$amountInp.on("change input ", function () {
@@ -425,42 +414,24 @@ function eventHandler() {
 					from: newVal
 				});
 			}
-
 		});
-
-		// $inputFrom.on("change input ", function () {
-		// 	var val = +($(this).prop("value").replace(/\s/g, ''));
-		// 	// validate
-		// 	if (val < min) {
-		// 		val = min;
-		// 	} else if (val > to) {
-		// 		val = to;
-		// 	}
-		//
-		// 	instance.update({
-		// 		from: val
-		// 	});
-		// 	$(this).prop("value", currencyFormat(val));
-		// 	console.log(val)
-		// });
-		//
-		// $inputTo.on("change input ", function () {
-		// 	var val = +($(this).prop("value").replace(/\s/g, ''));
-		//
-		// 	// validate
-		// 	if (val < from) {
-		// 		val = from;
-		// 	} else if (val > max) {
-		// 		val = max;
-		// 	}
-		//
-		// 	instance.update({
-		// 		to: val
-		// 	});
-		// 	$(this).prop("value", currencyFormat(val));
-		// });
-
 	});
+
+	//-
+	$('.make-yandex-lazy-js').each(function (){
+		let self = this;
+
+		window.setTimeout(function (){
+			$(self.parentElement).html($(self).data("src"));
+			self.remove();
+		}, 3500)
+	});
+	$('.scroll-top-js').click(function (){
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	})
 
 	// modal window
 

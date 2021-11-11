@@ -1,9 +1,29 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col
-				.col
-				.col-auto
+			+e.row.row.align-items-center
+				+e.col--policy.col-md-4.col-lg-auto.col-xl-auto
+					+e.policy
+						span © 2021 Аренда ТМО-80
+						a(href="#" target="_blank") Политика конфиденциальности
+				+e.col--tell.col-sm-6.col-md-4.col-lg.col-xl-auto
+					+topNavIconedItem({
+						iconName: 'tell-white',
+						href: 'tel:+74952203638',
+						linkVal: '+7(495) 220-36-38',
+					})
+				+e.col--mail.col-sm-6.col-md-4.col-lg.col-xl-auto
+					+topNavIconedItem({
+						iconName: 'mail-white',
+						href: 'mailto:2203638@mail.ru',
+						linkVal: '2203638@mail.ru',
+					})
+				+e.col--create.col-lg-4.col-xl
+					+e.sub-row.row.align-items-center
+						.col
+							+e.creator(href="#" target="_blank") Создание сайта - студия ВебПульт
+						.col-auto
+							+e.scroll-top.scroll-top-js.back
+								//-+icon('chevron-top')
+								.back-wrap
+									img.back-img(loading="lazy" src=`img/svg/chevron-top.svg` alt="")

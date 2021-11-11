@@ -9,14 +9,27 @@ mixin sMap(data)
 							p
 								span Адрес: Россия, 127204, г. Москва,
 								span Дмитровское ш.163А, к.2, БЦ «СК РОЯЛ»
-							p Контакты: +7 (495) 220-45-45
-							p E-mail: info2204545@mail.ru
+							p
+								| Контакты:
+								|
+								a(href="tel:+74952204545") +7 (495) 220-45-45
+							p
+								| E-mail:
+								|
+								a(href="mailto:info2204545@mail.ru") info2204545@mail.ru
 						+e.sub-box
 							p: b Склады:
 							p Cклад 1 - Химки-Долгопрудный: Лихачевское шоссе, микрорайон Левобережный, Химки, Московская область, Россия
 							p Склад 2 - Мытищи: посёлок Нагорное, с23/Л, городской округ Мытищи, Московская область, Россия
 					+sMapDDItem('Реквизиты', '')
-		+e.map
+						+e.sub-box
+							p ИНН/КПП: 9731001214/771501001
+							p ОГРН: 1187746447723
+							p Р/с 40702810602500085634 в ТОЧКА ПАО БАНКА "ФК ОТКРЫТИЕ"
+							p к/с 30101810845250000999
+							p БИК 044525999
+			+e.map
+				.make-yandex-lazy-js(data-src='<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8ca4a75f388ff62a8291572d6890d780501f492321a98ca0913292b46b077ac4&amp;width=100%25&amp;height=631&amp;lang=ru_RU&amp;scroll=false"></script>')
 	// end sMap
 
 mixin sMapDDItem(title, addClass='')
