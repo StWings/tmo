@@ -46,6 +46,9 @@ const JSCCommon = {
 							// console.log(modal.querySelector(elem).tagName)
 						}
 					}
+					setValue(data.days, '.days');
+					setValue(data.amount, '.amount');
+					//
 					setValue(data.title, '.ttu');
 					setValue(data.text, '.after-headline');
 					setValue(data.btn, '.btn');
@@ -360,6 +363,11 @@ function eventHandler() {
 		let _this = $(this);
 		var $range= _this.find(".slider-js");
 
+		//-btn
+		let modalBtn = document.querySelector('.calc-btn-js');
+		let thisFor = $range.data('for');
+		//
+
 		let $amountInp = _this.find('.amount-inp-js');
 		let $minBtn = _this.find('.amount-min-btn-js');
 		let $plusBtn = _this.find('.amount-plus-btn-js');
@@ -374,12 +382,14 @@ function eventHandler() {
 			hide_min_max: false,
 			onStart: updateInputs,
 			onChange: updateInputs,
-			onFinish: updateInputs
+			onFinish: updateInputs,
+			onUpdate: updateInputs,
 		});
 		instance = $range.data("ionRangeSlider");
 
 		function updateInputs(data) {
 			$amountInp.prop("value", currencyFormat(data.from));
+			modalBtn.setAttribute(`data-${thisFor}`, currencyFormat(data.from));
 		}
 
 		$amountInp.on("change input ", function () {
@@ -395,7 +405,7 @@ function eventHandler() {
 				from: val
 			});
 			$(this).prop("value", currencyFormat(val));
-			console.log(val)
+
 		});
 		$minBtn.on("click", function (){
 			let newVal = Number($amountInp.prop("value")) - 1;

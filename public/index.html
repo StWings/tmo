@@ -142,9 +142,9 @@
 			<!-- start headerBlock-->
 			<div class="headerBlock section" id="headerBlock">
 				<div class="headerBlock__video-wrap"><video class="fillItUp video" id="bgvid" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-<source src="video/video.mp4" loading="lazy" type="video/mp4"/>
-<source src="video/video.ogv" loading="lazy" type="video/ogv"/>
-<source src="video/video.webm" loading="lazy" type="video/webm"/>
+<source src="video/video.mp4"  type="video/mp4"/>
+<source src="video/video.ogv"  type="video/ogv"/>
+<source src="video/video.webm"  type="video/webm"/>
 </video>
 				</div>
 				<div class="headerBlock__container container">
@@ -578,7 +578,7 @@
 			</section>
 			<!-- end sScheme-->
 			<!-- start sSlider-->
-			<section class="sSlider section" id="sSlider">
+			<div class="sSlider section" id="sSlider">
 				<div class="container">
 					<div class="sSlider__slider-wrap">
 						<div class="swiper sSlider-slider-js">
@@ -619,10 +619,10 @@
 							<div class="swiper-scrollbar"></div>
 						</div>
 					</div>
-					<div class="sSlider__video"><iframe width="560" height="315" src="https://www.youtube.com/embed/4gWtivJ9SuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="sSlider__video"><iframe width="560" height="315" src="https://www.youtube.com/embed/4gWtivJ9SuI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 				</div>
-			</section>
+			</div>
 			<!-- end sSlider-->
 			<!-- start sImportant-->
 			<section class="sImportant section" id="sImportant">
@@ -895,7 +895,7 @@
 											</div>
 										</div>
 									</div>
-									<input class="range-slider slider-js" type="text" data-min="1" data-max="50" value="30"/>
+									<input class="range-slider slider-js" type="text" data-min="1" data-max="50" value="30" data-for="amount"/>
 								</div>
 							</div>
 							<div class="sCalc__range-wrap">
@@ -914,7 +914,7 @@
 											</div>
 										</div>
 									</div>
-									<input class="range-slider slider-js" type="text" data-min="1" data-max="500" value="100"/>
+									<input class="range-slider slider-js" type="text" data-min="1" data-max="500" value="100" data-for="days"/>
 								</div>
 							</div>
 						</div>
@@ -930,7 +930,7 @@
 						</div>
 					</div>
 					<div class="text-center">
-						<a class="sCalc__btn btn-default-js link-modal-js" href="#modal-offer">Получить&#160;коммерческое&#160;предложение
+						<a class="sCalc__btn btn-default-js link-modal-js calc-btn-js" href="#modal-offer" data-amount="30" data-days="100">Получить&#160;коммерческое&#160;предложение
 						</a>
 					</div>
 				</div>
@@ -1051,9 +1051,7 @@
 								<!-- +e.input-wrap-->
 							</div>
 							<label class="form-wrap__policy">
-								<input class="invisible" type="checkbox" checked="checked"/>
-								<div class="circle"></div>
-								<div class="txt">Я подтверждаю свое согласие на обработку моих персональных данных</div>
+								<input class="invisible" type="checkbox" checked="checked"/><span class="circle"></span><span class="txt">Я подтверждаю свое согласие на обработку моих персональных данных</span>
 							</label>
 							<button class="form-wrap__btn" type="submit">Заказать&#160;звонок
 							</button>
@@ -1074,6 +1072,8 @@
 							<div class="form-wrap__title">Получить коммерческое предложение
 							</div>
 							<div class="form-wrap__inputs">
+								<input class="amount" type="hidden" name="amount" value=""/>
+								<input class="days" type="hidden" name="days" value=""/>
 								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя*" required="required"/>
 								</div>
 								<!-- +e.input-wrap-->
@@ -1085,9 +1085,7 @@
 								<!-- +e.input-wrap-->
 							</div>
 							<label class="form-wrap__policy">
-								<input class="invisible" type="checkbox" checked="checked"/>
-								<div class="circle"></div>
-								<div class="txt">Я подтверждаю свое согласие на обработку моих персональных данных</div>
+								<input class="invisible" type="checkbox" checked="checked"/><span class="circle"></span><span class="txt">Я подтверждаю свое согласие на обработку моих персональных данных</span>
 							</label>
 							<button class="form-wrap__btn" type="submit">Отправить
 							</button>

@@ -11,8 +11,8 @@ mixin modal()
 						+input("+7 (___) ___-__-__", 'tel')(required)
 					+e.LABEL.policy
 						input(type="checkbox" checked class="invisible")
-						.circle
-						.txt Я подтверждаю свое согласие на обработку моих персональных данных
+						span.circle
+						span.txt Я подтверждаю свое согласие на обработку моих персональных данных
 					+e.BUTTON.btn(type="submit") Заказать&#160;звонок
 					div
 						+e.logo
@@ -23,13 +23,15 @@ mixin modal()
 				.text-center
 					+e.title Получить коммерческое предложение
 					+e.inputs
+						input.amount(type="hidden" name="amount" value="")
+						input.days(type="hidden" name="days" value="")
 						+input("Ваше имя*", 'text')(required)
 						+input("+7 (___) ___-__-__", 'tel')(required)
 						+input("E-mail*", 'email')(required)
 					+e.LABEL.policy
 						input(type="checkbox" checked class="invisible")
-						.circle
-						.txt Я подтверждаю свое согласие на обработку моих персональных данных
+						span.circle
+						span.txt Я подтверждаю свое согласие на обработку моих персональных данных
 					+e.BUTTON.btn(type="submit") Отправить
 					div
 						+e.logo

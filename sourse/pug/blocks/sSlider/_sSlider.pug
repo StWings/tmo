@@ -1,6 +1,6 @@
 mixin sSlider(data)
 	// start sSlider
-	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
+	+b.sSlider.section#sSlider&attributes(attributes)
 		.container
 			if data.title
 				+b.section-title
@@ -16,7 +16,7 @@ mixin sSlider(data)
 					.swiper-scrollbar
 			if data.video
 			+e.video
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/4gWtivJ9SuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/4gWtivJ9SuI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	// end sSlider
 
 mixin sSliderSlide(imgNum, dataFancy='sSliderSlide', imgName='sSlider-img-')
