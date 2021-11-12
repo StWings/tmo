@@ -278,6 +278,9 @@ function eventHandler() {
 	function calcHeaderHeight() {
 		if (!header) return;
 		document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
+		window.setTimeout(function (){
+			document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
+		}, 10);
 		headerH = header.offsetHeight;
 
 		window.scrollY > 0
