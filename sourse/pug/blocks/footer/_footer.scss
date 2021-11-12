@@ -50,12 +50,23 @@
 			display: block;
 		}
 		a{
+			white-space: nowrap;
+			display: inline-block;
+			line-height: 1.2;
+			padding-bottom: 0px;
+			border-bottom: 1px solid currentColor;
+			&:hover{
+				border-bottom: 1px solid transparent;
+			}
+
+
 			color: $white;
 
-			text-decoration: underline;
-			&:hover{
-				text-decoration: none;
-			}
+			//text-decoration: underline;
+			//&:hover{
+			//	text-decoration: none;
+			//}
+
 		}
 	}
 	//

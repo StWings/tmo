@@ -2,13 +2,16 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		+e.video-wrap
-			<video class="fillItUp video" id="bgvid" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-				<source src="video/video.mp4"  type="video/mp4"/>
+			<video class=" video video-js" id="bgvid" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+				<source src="video/tmo.mp4"  type="video/mp4"/>
 				<source src="video/video.ogv"  type="video/ogv"/>
 				<source src="video/video.webm"  type="video/webm"/>
 			</video>
 		+e.container.container
-			+e.btn.link-modal-js.btn-default-js(href="#modal-call") Оставить&#160;заявку
+			+e.btn-box
+				+e.play-btn.play-btn-js
+					img(loading="lazy" src="img/svg/player.svg" alt="")
+				+e.btn.link-modal-js.btn-default-js(href="#modal-call") Оставить&#160;заявку
 			+e.box
 				+e.main-row.row.gy-0.gx-0
 					+e.col--white.col-xl-auto.col-lg-3
@@ -17,11 +20,11 @@ mixin headerBlock()
 						+e.sub-row.row.align-items-center
 							+headerBlockItem({
 								imgNum: 1,
-								txt: 'Продажа ТМО',
+								txt: '<span>Продажа ТМО</span>',
 							})
 							+headerBlockItem({
 								imgNum: 2,
-								txt: 'Выкуп ТМО',
+								txt: '<span>Выкуп ТМО</span>',
 								hint: true,
 							})
 							+headerBlockItem({
@@ -45,7 +48,7 @@ mixin headerBlock()
 	// end headerBlock
 
 mixin headerBlockItem(data)
-	.col-sm-6.col-md-4
+	+e.main-col.col-sm-6.col-md-4
 		+e.item
 			+e.item-row.row.align-items-center.flex-nowrap
 				+e.col--ball.col-auto

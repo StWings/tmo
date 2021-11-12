@@ -16,7 +16,7 @@ mixin sSlider(data)
 					.swiper-scrollbar
 			if data.video
 			+e.video
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/4gWtivJ9SuI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/4gWtivJ9SuI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	// end sSlider
 
 mixin sSliderSlide(imgNum, dataFancy='sSliderSlide', imgName='sSlider-img-')

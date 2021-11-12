@@ -34,13 +34,17 @@
 						<li class="menu-item"><a href="#">Контакты</a></li>
 					</ul>
 					<div class="iconed-row row align-items-center">
-						<div class="col-auto">
-							<a class="iconed-row__icon back" href="tel:+79852203638">
-								<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/tell.svg" alt=""/></div>
-							</a>
-						</div>
-						<div class="col-auto">
-							<a class="iconed-row__link" href="tel:+79852203638">+7 (985) 220-36-38
+						<div class="col-auto" href="tel:+79852203638">
+							<a class="iconed-row__sub-row row d-flex align-items-center" href="tel:+79852203638">
+								<div class="col-auto d-block">
+									<div class="iconed-row__icon back">
+										<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/tell.svg" alt=""/></div>
+									</div>
+								</div>
+								<div class="col-auto d-block">
+									<div class="iconed-row__link">+7 (985) 220-36-38
+									</div>
+								</div>
 							</a>
 						</div>
 						<div class="col-auto">
@@ -49,13 +53,17 @@
 						</div>
 					</div>
 					<div class="iconed-row row align-items-center">
-						<div class="col-auto">
-							<a class="iconed-row__icon back" href="mailto:tmo80@bk.ru">
-								<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/mail.svg" alt=""/></div>
-							</a>
-						</div>
-						<div class="col-auto">
-							<a class="iconed-row__link" href="mailto:tmo80@bk.ru">tmo80@bk.ru
+						<div class="col-auto" href="mailto:tmo80@bk.ru">
+							<a class="iconed-row__sub-row row d-flex align-items-center" href="mailto:tmo80@bk.ru">
+								<div class="col-auto d-block">
+									<div class="iconed-row__icon back">
+										<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/mail.svg" alt=""/></div>
+									</div>
+								</div>
+								<div class="col-auto d-block">
+									<div class="iconed-row__link">tmo80@bk.ru
+									</div>
+								</div>
 							</a>
 						</div>
 					</div>
@@ -78,15 +86,19 @@
 								<div class="top-nav__txt">Оборудование для прогрева бетона
 								</div>
 							</div>
-							<div class="top-nav__col col-auto d-none d-md-block tel-col">
+							<div class="top-nav__col col-auto tel-col">
 								<div class="iconed-row row align-items-center">
-									<div class="col-auto">
-										<a class="iconed-row__icon back" href="tel:+79852203638">
-											<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/tell.svg" alt=""/></div>
-										</a>
-									</div>
-									<div class="col-auto">
-										<a class="iconed-row__link" href="tel:+79852203638">+7 (985) 220-36-38
+									<div class="col-auto" href="tel:+79852203638">
+										<a class="iconed-row__sub-row row d-flex align-items-center" href="tel:+79852203638">
+											<div class="col-auto d-block">
+												<div class="iconed-row__icon back">
+													<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/tell.svg" alt=""/></div>
+												</div>
+											</div>
+											<div class="col-auto d-none d-lg-block">
+												<div class="iconed-row__link">+7 (985) 220-36-38
+												</div>
+											</div>
 										</a>
 									</div>
 									<div class="col-auto">
@@ -95,15 +107,19 @@
 									</div>
 								</div>
 							</div>
-							<div class="top-nav__col col-auto d-none d-lg-block">
+							<div class="top-nav__col col-auto">
 								<div class="iconed-row row align-items-center">
-									<div class="col-auto">
-										<a class="iconed-row__icon back" href="mailto:tmo80@bk.ru">
-											<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/mail.svg" alt=""/></div>
-										</a>
-									</div>
-									<div class="col-auto">
-										<a class="iconed-row__link" href="mailto:tmo80@bk.ru">tmo80@bk.ru
+									<div class="col-auto" href="mailto:tmo80@bk.ru">
+										<a class="iconed-row__sub-row row d-flex align-items-center" href="mailto:tmo80@bk.ru">
+											<div class="col-auto d-block">
+												<div class="iconed-row__icon back">
+													<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/mail.svg" alt=""/></div>
+												</div>
+											</div>
+											<div class="col-auto d-none d-lg-block">
+												<div class="iconed-row__link">tmo80@bk.ru
+												</div>
+											</div>
 										</a>
 									</div>
 								</div>
@@ -141,15 +157,19 @@
 			<!-- end topLine-->
 			<!-- start headerBlock-->
 			<div class="headerBlock section" id="headerBlock">
-				<div class="headerBlock__video-wrap"><video class="fillItUp video" id="bgvid" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-<source src="video/video.mp4"  type="video/mp4"/>
+				<div class="headerBlock__video-wrap"><video class=" video video-js" id="bgvid" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+<source src="video/tmo.mp4"  type="video/mp4"/>
 <source src="video/video.ogv"  type="video/ogv"/>
 <source src="video/video.webm"  type="video/webm"/>
 </video>
 				</div>
 				<div class="headerBlock__container container">
-					<a class="headerBlock__btn link-modal-js btn-default-js" href="#modal-call">Оставить&#160;заявку
-					</a>
+					<div class="headerBlock__btn-box">
+						<div class="headerBlock__play-btn play-btn-js"><img loading="lazy" src="img/svg/player.svg" alt=""/>
+						</div>
+						<a class="headerBlock__btn link-modal-js btn-default-js" href="#modal-call">Оставить&#160;заявку
+						</a>
+					</div>
 					<div class="headerBlock__box">
 						<div class="headerBlock__main-row row gy-0 gx-0">
 							<div class="headerBlock__col headerBlock__col--white col-xl-auto col-lg-3">
@@ -157,7 +177,7 @@
 							</div>
 							<div class="headerBlock__col headerBlock__col--black col-xl col-lg-9">
 								<div class="headerBlock__sub-row row align-items-center">
-									<div class="col-sm-6 col-md-4">
+									<div class="headerBlock__main-col col-sm-6 col-md-4">
 										<div class="headerBlock__item">
 											<div class="headerBlock__item-row row align-items-center flex-nowrap">
 												<div class="headerBlock__col headerBlock__col--ball col-auto">
@@ -166,13 +186,13 @@
 													</div>
 												</div>
 												<div class="headerBlock__col headerBlock__col--hint col">
-													<div class="headerBlock__txt">Продажа ТМО
+													<div class="headerBlock__txt"><span>Продажа ТМО</span>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-6 col-md-4">
+									<div class="headerBlock__main-col col-sm-6 col-md-4">
 										<div class="headerBlock__item">
 											<div class="headerBlock__item-row row align-items-center flex-nowrap">
 												<div class="headerBlock__col headerBlock__col--ball col-auto">
@@ -187,13 +207,13 @@
 														<div class="hint__content">Гарантированный выкуп купленного у нас оборудования
 														</div>
 													</div>
-													<div class="headerBlock__txt">Выкуп ТМО
+													<div class="headerBlock__txt"><span>Выкуп ТМО</span>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-6 col-md-4">
+									<div class="headerBlock__main-col col-sm-6 col-md-4">
 										<div class="headerBlock__item">
 											<div class="headerBlock__item-row row align-items-center flex-nowrap">
 												<div class="headerBlock__col headerBlock__col--ball col-auto">
@@ -208,7 +228,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-6 col-md-4">
+									<div class="headerBlock__main-col col-sm-6 col-md-4">
 										<div class="headerBlock__item">
 											<div class="headerBlock__item-row row align-items-center flex-nowrap">
 												<div class="headerBlock__col headerBlock__col--ball col-auto">
@@ -223,7 +243,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-6 col-md-4">
+									<div class="headerBlock__main-col col-sm-6 col-md-4">
 										<div class="headerBlock__item">
 											<div class="headerBlock__item-row row align-items-center flex-nowrap">
 												<div class="headerBlock__col headerBlock__col--ball col-auto">
@@ -619,7 +639,7 @@
 							<div class="swiper-scrollbar"></div>
 						</div>
 					</div>
-					<div class="sSlider__video"><iframe width="560" height="315" src="https://www.youtube.com/embed/4gWtivJ9SuI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="sSlider__video"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/4gWtivJ9SuI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
@@ -689,7 +709,7 @@
 					</div>
 					<div class="sAction__row row align-items-center">
 						<div class="col-sm-auto">
-							<a class="sAction__btn btn-default-js" href="#">Оставить&#160;заявку
+							<a class="sAction__btn btn-default-js link-modal-js" href="#modal-call">Оставить&#160;заявку
 							</a>
 						</div>
 						<div class="col-sm-auto">
@@ -804,7 +824,7 @@
 							<div class="section-title">
 								<h2>Срочная доставка в день обращения</h2>
 							</div>
-							<a class="sDelivery__btn btn-default-js link-modal-js" href="#">Оставить&#160;заявку
+							<a class="sDelivery__btn btn-default-js link-modal-js" href="#modal-call">Оставить&#160;заявку
 							</a>
 							<div class="sDelivery__hot-txt">
 								<div class="sDelivery__hot-inner">Не доставили в срок?! Доставка за наш счет
@@ -993,26 +1013,34 @@
 						</div>
 						<div class="footer__col footer__col--tell col-sm-6 col-md-4 col-lg col-xl-auto">
 							<div class="iconed-row row align-items-center">
-								<div class="col-auto">
-									<a class="iconed-row__icon back" href="tel:+74952203638">
-										<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/tell-white.svg" alt=""/></div>
-									</a>
-								</div>
-								<div class="col-auto">
-									<a class="iconed-row__link" href="tel:+74952203638">+7(495) 220-36-38
+								<div class="col-auto" href="tel:+74952203638">
+									<a class="iconed-row__sub-row row d-flex align-items-center" href="tel:+74952203638">
+										<div class="col-auto d-block">
+											<div class="iconed-row__icon back">
+												<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/tell-white.svg" alt=""/></div>
+											</div>
+										</div>
+										<div class="col-auto d-block">
+											<div class="iconed-row__link">+7(495) 220-36-38
+											</div>
+										</div>
 									</a>
 								</div>
 							</div>
 						</div>
 						<div class="footer__col footer__col--mail col-sm-6 col-md-4 col-lg col-xl-auto">
 							<div class="iconed-row row align-items-center">
-								<div class="col-auto">
-									<a class="iconed-row__icon back" href="mailto:2203638@mail.ru">
-										<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/mail-white.svg" alt=""/></div>
-									</a>
-								</div>
-								<div class="col-auto">
-									<a class="iconed-row__link" href="mailto:2203638@mail.ru">2203638@mail.ru
+								<div class="col-auto" href="mailto:2203638@mail.ru">
+									<a class="iconed-row__sub-row row d-flex align-items-center" href="mailto:2203638@mail.ru">
+										<div class="col-auto d-block">
+											<div class="iconed-row__icon back">
+												<div class="back-wrap"><img class="back-img" loading="lazy" src="img/svg/mail-white.svg" alt=""/></div>
+											</div>
+										</div>
+										<div class="col-auto d-block">
+											<div class="iconed-row__link">2203638@mail.ru
+											</div>
+										</div>
 									</a>
 								</div>
 							</div>
@@ -1053,7 +1081,7 @@
 							<label class="form-wrap__policy">
 								<input class="invisible" type="checkbox" checked="checked"/><span class="circle"></span><span class="txt">Я подтверждаю свое согласие на обработку моих персональных данных</span>
 							</label>
-							<button class="form-wrap__btn" type="submit">Заказать&#160;звонок
+							<button class="form-wrap__btn btn-default-js" type="submit">Заказать&#160;звонок
 							</button>
 							<div>
 								<div class="form-wrap__logo"><img loading="lazy" src="img/@2x/logo.png" alt=""/>
@@ -1087,7 +1115,7 @@
 							<label class="form-wrap__policy">
 								<input class="invisible" type="checkbox" checked="checked"/><span class="circle"></span><span class="txt">Я подтверждаю свое согласие на обработку моих персональных данных</span>
 							</label>
-							<button class="form-wrap__btn" type="submit">Отправить
+							<button class="form-wrap__btn btn-default-js" type="submit">Отправить
 							</button>
 							<div>
 								<div class="form-wrap__logo"><img loading="lazy" src="img/@2x/logo.png" alt=""/>

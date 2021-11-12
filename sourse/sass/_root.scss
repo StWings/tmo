@@ -1,6 +1,7 @@
 :root {
   --animate-delay: 1.2s;
 
+
 	--sPT: #{rem(40)};
 	--sPB: #{rem(45)};
 	--sTPB: #{rem(30)};
@@ -31,4 +32,11 @@
 
 
   --fancybox-bg: rgba(24, 24, 27, .77);
+}
+
+.fancybox__thumbs .carousel__slide .fancybox__thumb::after{
+  border-color: $primary;
+}
+.fancybox__container{
+  --fancybox-accent-color: #{$primary} !important;
 }

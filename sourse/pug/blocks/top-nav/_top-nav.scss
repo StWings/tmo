@@ -1,18 +1,21 @@
 .top-nav {
 	background-color: $white;
-	padding: rem(20) 0;
+	padding: var(--tn-padd, 10px 0);
 	box-shadow: var(--tn-box-shadow, none);
 
 	//-
 	&__row{
-		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-x: #{rem(15)};
 		@include media-breakpoint-up(xl){
 			--bs-gutter-x: #{rem(38)};
 		}
 	}
 	&__logo{
 		display: block;
-		width: rem(213);
+		width: rem(150);
+		@include media-breakpoint-up(xl){
+			width: var(--logo-w, #{rem(213)});
+		}
 
 		img{
 			width: 100%;
@@ -43,7 +46,12 @@
 
 .iconed-row{
 	--bs-gutter-x: #{rem(15)};
+	&__sub-row{
+		--bs-gutter-x: inherit;
+	}
+
 	&__icon{
+		margin: 0;
 		width: rem(35);
 		height: rem(35);
 		border-radius: 35px;
@@ -74,13 +82,16 @@
 		line-height: calc(20/17);
 	}
 	&__wa{
+		width: rem(35);
+		height: rem(35);
 		@include media-breakpoint-up(xl){
+			width: rem(20);
+			height: rem(20);
 			position: relative;
 			left: -5px;
 		}
 
-		width: rem(20);
-		height: rem(20);
+
 		display: flex;
 		align-items: center;
 		justify-content: center;

@@ -442,6 +442,19 @@ function eventHandler() {
 			behavior: "smooth",
 		});
 	})
+	//
+	let playButton = document.querySelector('.play-btn-js');
+	let video = document.querySelector('.video-js');
+	// Event listener for the play/pause button
+	playButton.addEventListener("click", function() {
+		if (video.paused == true) {
+			// Play the video
+			video.play();
+		} else {
+			// Pause the video
+			video.pause();
+		}
+	});
 
 	// modal window
 
