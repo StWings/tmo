@@ -83,6 +83,16 @@
 			position: relative;
 		}
 	}
+	.col-md-4{
+		&:nth-child(3){
+			
+			--img-top: 5px;
+			.sUsefull__item:hover{
+				--img-top: 10px;
+
+			}
+		}
+	}
 	&__title{
 		display: block;
 		margin: 0 auto rem(15) auto;
