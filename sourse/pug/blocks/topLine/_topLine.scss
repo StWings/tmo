@@ -1,6 +1,10 @@
 // start .topLine
 .topLine {
-	padding: rem(23) 0;
+	@include media-breakpoint-up(md){
+
+		padding: rem(23) 0;
+	}
+	padding: rem(13) 0;
 
 	background-color: transparent;
 	width: 100%;

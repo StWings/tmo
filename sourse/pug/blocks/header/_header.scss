@@ -1,9 +1,12 @@
 // start .header
 .header {
-	position: fixed;
-	//-position: absolute;
+	position: absolute;
+	&.fixed{
+		
+	}
 	--tn-padd: #{rem(20)} 0;
 	&.fixed{
+		position: fixed;
 		--tn-box-shadow: 0 0 10px 0 #{rgba($black, .3)};
 		--tn-padd: #{rem(10)} 0;
 		--logo-w: #{rem(178)};
