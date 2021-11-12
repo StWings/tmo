@@ -2,7 +2,7 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		+e.video-wrap
-			<video class=" video video-js" id="bgvid" preload="auto" no-controls autoplay loop playsinline muted  poster="img/@2x/poster.jpg">
+			<video class=" video video-js" id="bgvid" loading="lazy" preload="auto" no-controls autoplay loop playsinline muted  poster="img/@2x/poster.jpg">
 				<source src="video/tmo.mp4"  type="video/mp4"/>
 				<source src="video/video.ogv"  type="video/ogv"/>
 				<source src="video/video.webm"  type="video/webm"/>
