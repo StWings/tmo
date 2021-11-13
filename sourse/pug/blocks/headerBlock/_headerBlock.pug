@@ -1,8 +1,8 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock--js.section#headerBlock&attributes(attributes)
 		+e.video-wrap
-			<video class=" video video-js" id="bgvid" playsinline="playsinline" muted="muted" loop="loop" poster="img/@2x/poster.jpg">
+			<video class=" video video-js" id="bgvid" autoplay="true" playsinline="playsinline" muted="muted" loop="loop" poster="img/@2x/poster.jpg">
 				<source src="video/tmo.mp4"  type="video/mp4"/>
 				<source src="video/video.ogv"  type="video/ogv"/>
 				<source src="video/video.webm"  type="video/webm"/>
@@ -11,8 +11,8 @@ mixin headerBlock()
 			+e.btn-box
 				+e.play-btn.play-btn-js
 					img(loading="lazy" src="img/svg/player.svg" alt="")
-				+e.btn.link-modal-js.btn-default-js(href="#modal-call") Оставить&#160;заявку
-			+e.box
+				+e.btn.link-modal-js.btn-default-js.video-hack-js(href="#modal-call") Оставить&#160;заявку
+			+e.box.video-hack-js
 				+e.main-row.row.gy-0.gx-0
 					+e.col--white.col-xl-auto.col-lg-3
 						h1 Самый новый арендный парк в&nbsp;Москве 2017-2021

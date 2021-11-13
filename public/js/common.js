@@ -20,8 +20,15 @@ const JSCCommon = {
 				Escape: "Закрыть",
 				NEXT: "Вперед",
 				PREV: "Назад", 
-			}, 
-		}); 
+			},
+		});
+		$(link).click(function (){
+			window.setTimeout(function (){
+				$('input').blur();
+			},10);
+		});
+		$('input').attr('autocomplete', 'off');
+
 		document.querySelectorAll(".modal-close-js").forEach(el=>{
 			el.addEventListener("click", ()=>{
 				Fancybox.close();
@@ -283,7 +290,7 @@ function eventHandler() {
 		}, 10);
 		headerH = header.offsetHeight;
 
-		window.scrollY > 0
+		window.scrollY > 1000
 			? header.classList.add('fixed')
 			: header.classList.remove('fixed');
 	}
@@ -446,18 +453,32 @@ function eventHandler() {
 		});
 	})
 	//
+	let headerBlock = document.querySelector('.headerBlock--js');
 	let playButton = document.querySelector('.play-btn-js');
 	let video = document.querySelector('.video-js');
 	// Event listener for the play/pause button
-	playButton.addEventListener("click", function() {
+	headerBlock.addEventListener("click", function() {
+		if (event.target.closest('.video-hack-js')){
+			return
+		}
+
+		// $(playButton).addClass('active');
+		// video.pause();
+
 		if (video.paused == true) {
 			// Play the video
+			$(playButton).removeClass('active');
 			video.play();
 		} else {
 			// Pause the video
+			$(playButton).addClass('active');
 			video.pause();
 		}
 	});
+	// $(playButton).click(function (){
+	// 	$(this).removeClass('active');
+	// 	video.play();
+	// })
 
 	// modal window
 
