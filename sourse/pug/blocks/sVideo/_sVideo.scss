@@ -2,10 +2,12 @@
 .sVideo {
 	min-height: rem(300);
 	padding: 0;
+	text-align: center;
 	video{
-		max-width: 100%;
+		width: 100%;
 		height: auto;
 		object-fit: cover;
+		max-height: 1000px;
 	}
 	// height: rem(550);
 	// max-height: calc(var(--vh) * 100);
