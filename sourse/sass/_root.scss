@@ -32,6 +32,21 @@
 
 
   --fancybox-bg: rgba(24, 24, 27, .77);
+
+  	@include media-breakpoint-up(xl){
+      
+      --header-h: 108px;
+    }
+  	@include media-breakpoint-up(lg){
+      
+      --header-h: 77px;
+    }
+  	@include media-breakpoint-up(md){
+      
+      --header-h: 83px;
+    }
+    
+    --header-h: 58px;
 }
 
 .fancybox__thumbs .carousel__slide .fancybox__thumb::after{

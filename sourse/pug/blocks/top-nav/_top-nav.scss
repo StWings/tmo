@@ -1,9 +1,13 @@
 .top-nav {
 	transition: none;
 	background-color: $white;
-	padding: var(--tn-padd, 10px 0);
-	box-shadow: var(--tn-box-shadow, none);
+		@include media-breakpoint-up(md){
 
+			padding: var(--tn-padd, 10px 0);
+		}
+		padding: 5px 0;
+	box-shadow: var(--tn-box-shadow, none);
+	// @include mt;
 	//-
 	&__row{
 		--bs-gutter-x: #{rem(15)};
@@ -102,5 +106,11 @@
 			width: auto;
 			height: auto;
 		}
+	}
+}
+
+.iconed-row__wa{
+	img{
+		max-width: 20px;
 	}
 }
