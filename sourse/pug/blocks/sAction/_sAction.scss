@@ -2,9 +2,9 @@
 .sAction {
 	//background-color: $black;
 	//opacity: 0.7;
-	--sPT: #{rem(90)};
-	--sPB: #{rem(70)};
-	--sTPB: #{rem(40)};
+	// --sPT: #{rem(90)};
+	// --sPB: #{rem(70)};
+	// --sTPB: #{rem(40)};
 	@include media-breakpoint-up(xl) {
 		min-height: rem(632);
 		--sPT: #{rem(208)};

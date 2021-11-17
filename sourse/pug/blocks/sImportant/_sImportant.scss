@@ -1,8 +1,8 @@
 // start .sImportant
 .sImportant {
-	--sPT: #{rem(30)};
-	--sPB: #{rem(45)};
-	--sTPB: #{rem(30)};
+	// --sPT: #{rem(30)};
+	// --sPB: #{rem(45)};
+	// --sTPB: #{rem(30)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(24)};
 		--sPB: #{rem(51)};

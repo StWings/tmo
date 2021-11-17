@@ -1,8 +1,8 @@
 // start .sFeedback
 .sFeedback {
-	--sPT: #{rem(40)};
-	--sPB: #{rem(45)};
-	--sTPB: #{rem(30)};
+	// --sPT: #{rem(40)};
+	// --sPB: #{rem(45)};
+	// --sTPB: #{rem(30)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(50)};
 		--sPB: #{rem(50)};

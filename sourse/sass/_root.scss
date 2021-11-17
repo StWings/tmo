@@ -2,10 +2,10 @@
   --animate-delay: 1.2s;
 
 
-	--sPT: #{rem(40)};
-	--sPB: #{rem(45)};
+	--sPT: 80px;
+	--sPB: 60px;
 	--sTPB: #{rem(30)};
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(xl) {
     --sPT: #{rem(80)};
     --sPB: #{rem(90)};
     --sTPB: #{rem(40)};

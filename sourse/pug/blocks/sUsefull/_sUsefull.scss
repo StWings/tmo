@@ -1,8 +1,8 @@
 // start .sUsefull
 .sUsefull {
-	--sPT: #{rem(40)};
-	--sPB: #{rem(45)};
-	--sTPB: #{rem(60)};
+	// --sPT: #{rem(40)};
+	// --sPB: #{rem(45)};
+	// --sTPB: #{rem(60)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(52)};
 		--sPB: #{rem(60)};
