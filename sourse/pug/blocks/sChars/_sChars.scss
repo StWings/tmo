@@ -7,32 +7,60 @@
 		--sPB: #{rem(30)};
 	}
 
+	
+	.col-lg-6{
+			@include media-breakpoint-up(lg){
+			width: calc(100% * 4 / 12);
+			// min-height: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+			.row{
+				// display: block;
+			}
+	}
 	&__row{
 		--bs-gutter-x: 26px;
+		@include media-breakpoint-down(lg){
 		--bs-gutter-y: #{rem(40)};
+		}
 		margin-bottom: rem(51);
 	}
 	&__sub-row{
-
+		// display: block;
+			@include media-breakpoint-up(lg){
+				
+				flex-direction: column;
+				min-height: 100%;
+				flex-grow: 1;
+			}
 	}
 	&__sub-col{
-		--sub-col-w-left: 51.2%;
-		--sub-col-w-right: calc(100% - var(--sub-col-w-left));
+		--sub-col-w-left: 100%;
+		--sub-col-w-right: calc(100% );
 
 		&--left{
-			@include media-breakpoint-up(xl){
+			@include media-breakpoint-up(lg){
 				width: var(--sub-col-w-left) !important;
 			}
+			 
 		}
 		&--right{
-			@include media-breakpoint-up(xl){
+			flex-grow: 0;
+			// flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			@include media-breakpoint-up(lg){
 				width: var(--sub-col-w-right) !important;
 			}
 		}
 	}
 	&__img{
 		width: 100%;
-
+		@include media-breakpoint-up(lg){
+			
+			height: rem(265);
+		}
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -54,7 +82,8 @@
 	}
 	&__title{
 		color: $black;
-		font-size: rem(40);
+		// font-size: rem(40);
+			@include rfs(35px);
 		font-weight: 700;
 		line-height: 1;
 		text-align: left;
@@ -62,9 +91,7 @@
 	}
 	//-
 	&__chars{
-		padding-bottom: rem(25);
-		border-bottom: 1px solid $black;
-		margin-bottom: rem(25);
+		margin-bottom: auto;
 	}
 	&__char{
 		margin-bottom: rem(14);
@@ -145,6 +172,9 @@
 		}
 	}
 	&__foot-txt{
+		padding-top: rem(25);
+		border-top: 1px solid $black;
+		margin-top: rem(25);
 		color: $black;
 		font-size: rem(14);
 		font-weight: 500;
@@ -153,6 +183,7 @@
 	//-
 	&__{}
 	&__{}
+
 } // end.sChars
 
 .charSlider{
@@ -179,7 +210,8 @@
 	&__title{
 		color: $black;
 		max-width: 120px;
-		font-size: rem(25);
+		// font-size: rem(25);
+		@include rfs(25px);
 		font-weight: 700;
 		line-height: calc(35/25);
 		margin-bottom: 8px;
