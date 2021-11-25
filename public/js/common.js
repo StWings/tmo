@@ -136,6 +136,51 @@ const JSCCommon = {
 	},
 	// /tabs
 
+	sendForm(form) {
+		var google_public_key = '6Ledqk4dAAAAAMU6wolHebnBckRnMJyBMa9pcBgv';
+		// if (!document.getElementById("REQUEST_PRIVACY_1").checked === true){
+			// $(".checkbox__text").css({"color":"red"});
+			// return false;
+		// }
+
+		var $fio = $(form).find('input[name="name"]').val();
+		var $phone = $(form).find('input[name="phone"]').val();
+
+
+
+		$.getScript("https://www.google.com/recaptcha/api.js?render="+google_public_key, function(){
+			// $fio = $('input[name="fio"]').val();
+			// $phone = $('input[name="phone"]').val();
+			var $captcha = "";
+			grecaptcha.ready(function () {
+				grecaptcha.execute(google_public_key, {action: 'create_comment'}).then(function (token) {
+					// console.log(token);
+					$.post('/local/ajax/forms.php', {type: "callback", name: $fio, phone: $phone, captcha: token}, function (data) {
+
+
+						if (data.code === 0) {
+							$('.ui-modal__close').trigger('click');
+
+							Fancybox.close();
+
+							alert('Спасибо! Ваша заявка принята, наш менеджер свяжется с Вами в ближайшее время');
+							setTimeout(function () {
+								// $('#modal2').modal('hide');
+								$('input[name="name"]').val("");
+								$('input[name="phone"]').val("");
+							}, 500);
+							// console.log(data.message);
+						} else {
+							$(".error_formv_title").html("Ошибка!");
+							$(".error_formv").html(data.message);
+						}
+					}, "json");
+				})
+			});
+		});
+
+	},
+
 	inputMask() {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
