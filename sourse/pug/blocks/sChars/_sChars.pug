@@ -37,6 +37,31 @@ mixin sChars(data)
 						title: 'Вес',
 						val: '365 кг',
 					})
+
+				+sCharsItem({
+					imgNum: 3,
+					title: 'Парогенераторная  станция'
+				})
+					+sCharsChar({
+						title: 'Мощность',
+						val: '80 кВА',
+					})
+					+sCharsChar({
+						title: 'Давление',
+						val: 'МПа (кгс/см2) (3,5-5,5)',
+					})
+
+					
+					+sCharsChar({
+						title: 'Вес',
+						val: '150 кг',
+					})
+					+sCharsChar({
+						title: 'Объём бака для воды',
+						val: '200 л',
+					})
+
+
 			+b.charSlider#slider
 				+e.row.row.align-items-center
 					+e.col--left.col-lg-auto.align-self-lg-start
@@ -88,7 +113,8 @@ mixin sCharsItem(data)
 				+e.H2.title.text-center.text-sm-start=data.title
 				+e.chars
 					block
-				+e.foot-txt=data.footTxt
+				if data.footTxt
+					+e.foot-txt=data.footTxt
 
 mixin sCharsChar(data)
 	+e.char
